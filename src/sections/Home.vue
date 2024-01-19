@@ -1,51 +1,67 @@
 <template>
     <ContainerPage>
-        <section class="area-profile">
-            <div>
-                <img src="@/assets/images/profile-mobile.png" alt="Imagem de perfil">
-            </div>
-            <div class="area-desc">
-                <span>Oioi! Eu sou a</span>
-                <div class="area-texts">
-                    <div class="area-role">
-                        <h1>Linda Souza!</h1>
-                        <h3>Product Designer Júnior (UX/UI)</h3>
-                    </div>
-                    <p>
-                        Sou apaixonada pelo universo da Experiência do Usuário, com uma pitada de conhecimento em
-                        desenvolvimento
-                        front-end. Foco em resolver problemas e criar produtos digitais que fazem a diferença, utilizando
-                        ferramentas e processos de UX/UI centradas na experiência do usuário.
-                        Estou sempre aberta a novos desafios e oportunidades de aprendizado, pronta para trazer minha paixão
-                        pela UX/UI para a mesa e contribuir com energia positiva em projetos super legais!
-                    </p>
-                    <span>Vamos criar experiências incríveis juntos?</span>
+        <div>
+            <img src="@/assets/images/profile-mobile.png" alt="Imagem de perfil">
+        </div>
+        <div class="area-desc">
+            <span>Oioi! Eu sou a</span>
+            <div class="area-texts">
+                <div class="area-role">
+                    <h1>Linda Souza!</h1>
+                    <h3>Product Designer Júnior (UX/UI)</h3>
                 </div>
-                <div>icones vão aqui</div>
+                <p>
+                    Sou apaixonada pelo universo da Experiência do Usuário, com uma pitada de conhecimento em
+                    desenvolvimento
+                    front-end. Foco em resolver problemas e criar produtos digitais que fazem a diferença, utilizando
+                    ferramentas e processos de UX/UI centradas na experiência do usuário.
+                    Estou sempre aberta a novos desafios e oportunidades de aprendizado, pronta para trazer minha paixão
+                    pela UX/UI para a mesa e contribuir com energia positiva em projetos super legais!
+                </p>
+                <span>Vamos criar experiências incríveis juntos?</span>
             </div>
-        </section>
+            <div class="area-icons">
+                <button @click="redirectSocialMedia('https://www.linkedin.com/in/lindassouza/')">
+                    <img src="@/assets/icons/linkedin-com.svg" />
+                </button>
+                <button @click="redirectSocialMedia('https://medium.com/@lindassouza')">
+                    <img src="@/assets/icons/medium-com.svg" />
+                </button>
+                <button @click="redirectSocialMedia('http://www.behance.net/lindassouza')">
+                    <img src="@/assets/icons/behance-com.svg" />
+                </button>
+                <button @click="redirectSocialMedia('mailto:linda.15brandao@gmail.com')">
+                    <img src="@/assets/icons/gmail-com.svg" />
+                </button>
+            </div>
+        </div>
+        <ButtonOutline text="Baixar CV" :function-click="downloadCV" />
+
+        <img class="img-footer" src="@/assets/images/footer-orange.svg" />
     </ContainerPage>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import ContainerPage from '@/components/ContainerPage.vue';
+import ButtonOutline from '@/components/ButtonOutline.vue';
 
 export default defineComponent({
     name: 'Home',
-    components: { ContainerPage }
+    components: { ContainerPage, ButtonOutline },
+    methods: {
+        redirectSocialMedia(link: string){
+            window.location.href = link;
+        },
+        downloadCV(){
+            console.log('deve baixar o curriculo')
+        }
+    }
 });
 </script>
 
 <style scoped>
 @import '@/assets/main.css';
-
-.area-profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-}
 
 .area-desc {
     display: flex;
@@ -70,6 +86,7 @@ export default defineComponent({
     font-size: 12px;
     font-weight: 400;
     line-height: 20px;
+    text-align: justify;
 }
 
 .area-texts span {
@@ -88,5 +105,25 @@ export default defineComponent({
     color: var(--color-blue);
     font-size: 16px;
     font-weight: 600;
+}
+
+.area-icons{
+    display: flex;
+    gap: 10px;
+}
+
+.area-icons button{
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.img-footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 </style>

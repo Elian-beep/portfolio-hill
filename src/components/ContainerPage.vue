@@ -1,6 +1,8 @@
 <template>
-    <main class="main">
-        <slot></slot>
+    <main>
+        <section>
+            <slot></slot>
+        </section>
     </main>
 </template>
 
@@ -17,8 +19,15 @@ export default defineComponent({
 <style scoped>
 @import '@/assets/main.css';
 
-.main {
+main {
     padding-top: 24px;
     max-width: 1128px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 }
 </style>
