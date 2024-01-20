@@ -17,7 +17,7 @@
             </p>
         </div>
     </ContainerPage>
-    <FooterImgDefault :is-home="false" />
+    <!-- <FooterImgDefault :is-home="false" /> -->
 </template>
 
 <script lang="ts">
