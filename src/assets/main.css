@@ -15,7 +15,9 @@ body, html {
 }
 
 #app {
-  padding: 16px 32px;
+  /* padding: 16px 32px; */
+  position: relative;
+  min-height: 100vh;
 }
 
 html,

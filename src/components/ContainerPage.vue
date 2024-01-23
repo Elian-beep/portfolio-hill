@@ -22,6 +22,7 @@ export default defineComponent({
 main {
     padding-top: 24px;
     max-width: 1128px;
+    margin-bottom: 20px;
 }
 
 section{

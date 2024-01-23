@@ -12,4 +12,7 @@ export default defineComponent({
 <style scoped>
 @import '@/assets/main.css';
 
+@media screen and (min-width: 796px){
+}
+
 </style>

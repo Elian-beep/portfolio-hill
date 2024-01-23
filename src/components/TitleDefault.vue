@@ -24,4 +24,10 @@ export default defineComponent({
     font-weight: 600;
 }
 
+@media screen and (min-width: 796px){
+    .title{
+        font-size: 32px;
+    }
+}
+
 </style>

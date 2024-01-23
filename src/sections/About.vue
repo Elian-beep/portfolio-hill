@@ -1,6 +1,6 @@
 <template>
     <ContainerPage>
-        <img src="@/assets/images/work-women.svg" alt="mulher cartoon trabalhando com design">
+        <img :src="imageWorkWomen" alt="mulher cartoon trabalhando com design">
         <div class="area-desc">
             <TitleDefault text="Sobre" />
             <p>
@@ -17,18 +17,29 @@
             </p>
         </div>
     </ContainerPage>
-    <!-- <FooterImgDefault :is-home="false" /> -->
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import ContainerPage from '@/components/ContainerPage.vue';
 import TitleDefault from '@/components/TitleDefault.vue';
-import FooterImgDefault from '@/components/FooterImgDefault.vue';
+
+import workWomenLaptop from '@/assets/images/work-women-laptop.svg';
+import workWomenMobile from '@/assets/images/work-women-mobile.svg';
 
 export default defineComponent({
     name: 'About',
-    components: { ContainerPage, TitleDefault, FooterImgDefault }
+    components: { ContainerPage, TitleDefault },
+    data() {
+        return {
+            isWideScreen: window.innerWidth > 769,
+        };
+    },
+    computed: {
+        imageWorkWomen(): string{
+            return this.isWideScreen ? workWomenLaptop : workWomenMobile;  
+        }
+    }
 });
 </script>
 
@@ -52,5 +63,8 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media screen and (min-width: 796px){
 }
 </style>

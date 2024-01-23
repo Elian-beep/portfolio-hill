@@ -36,8 +36,6 @@
             </div>
         </div>
         <ButtonOutline text="Baixar CV" :function-click="downloadCV" />
-
-        <!-- <img class="img-footer" src="@/assets/images/footer-orange.svg" /> -->
     </ContainerPage>
 </template>
 
