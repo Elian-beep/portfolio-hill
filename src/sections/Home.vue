@@ -1,5 +1,5 @@
 <template>
-    <ContainerPage>
+    <ContainerPage :style-home="true">
         <div>
             <ResizeImg :img-mobile="profileMobile" :img-laptop="profileLaptop" text-alt="Imagem de perfil" />
         </div>
@@ -34,8 +34,10 @@
                     <img src="@/assets/icons/gmail-com.svg" />
                 </button>
             </div>
+            <div class="area-button">
+                <ButtonOutline text="Visualizar  CV" :function-click="downloadCV" />
+            </div>
         </div>
-        <ButtonOutline text="Visualizar  CV" :function-click="downloadCV" />
     </ContainerPage>
 </template>
 
@@ -131,13 +133,47 @@ export default defineComponent({
     border: none;
     padding: 0;
     margin: 0;
+    cursor: pointer;
 }
 
-.img-footer {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
+.area-button{
+    z-index: 99;
+    margin-bottom: 40px;
+}
+
+@media screen and (min-width: 796px) {
+    .area-desc {
+        gap: 24px;
+    }
+
+    .area-desc span {
+        font-size: 16px;
+    }
+
+    .area-role h1 {
+        font-size: 56px;
+    }
+
+    .area-role h3 {
+        font-size: 24px;
+    }
+
+    .area-texts p {
+        max-width: 648px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .area-texts span {
+        font-size: 18px;
+    }
+
+    .area-icons {
+        gap: 16px;
+    }
+
+    .area-button{
+        max-width: 364px;
+    }
 }
 </style>

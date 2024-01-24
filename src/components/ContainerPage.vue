@@ -1,6 +1,6 @@
 <template>
     <main>
-        <section>
+        <section :class="{ styleHome : styleHome }">
             <slot></slot>
         </section>
     </main>
@@ -13,6 +13,12 @@ import Navbar from '@/components/Navbar.vue';
 export default defineComponent({
     name: 'ContainerPage',
     components: { Navbar },
+    props: {
+        styleHome: {
+            type: Boolean,
+            required: false,
+        }
+    }
 });
 </script>
 
@@ -33,5 +39,9 @@ section{
 }
 
 @media screen and (min-width: 796px){
+    .styleHome{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
 }
 </style>
