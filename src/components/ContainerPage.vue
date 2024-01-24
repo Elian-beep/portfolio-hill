@@ -12,7 +12,7 @@ import Navbar from '@/components/Navbar.vue';
 
 export default defineComponent({
     name: 'ContainerPage',
-    components: { Navbar }
+    components: { Navbar },
 });
 </script>
 
@@ -30,5 +30,8 @@ section{
     flex-direction: column;
     align-items: center;
     gap: 24px;
+}
+
+@media screen and (min-width: 796px){
 }
 </style>

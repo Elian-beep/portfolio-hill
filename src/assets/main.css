@@ -6,7 +6,8 @@
   --color-white: #FEFEFE;
 }
 
-body, html {
+body,
+html {
   background: var(--color-white);
   font-family: 'Montserrat', sans-serif;
   text-rendering: optimizeLegibility;
@@ -19,6 +20,8 @@ body, html {
   position: relative;
   min-height: 100vh;
 }
+
+/* STYLES IMGS */
 
 html,
 body,

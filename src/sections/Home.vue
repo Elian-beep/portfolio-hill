@@ -1,7 +1,7 @@
 <template>
     <ContainerPage>
         <div>
-            <img src="@/assets/images/profile-mobile.png" alt="Imagem de perfil">
+            <ResizeImg :img-mobile="profileMobile" :img-laptop="profileLaptop" text-alt="Imagem de perfil" />
         </div>
         <div class="area-desc">
             <span>Oioi! Eu sou a</span>
@@ -35,7 +35,7 @@
                 </button>
             </div>
         </div>
-        <ButtonOutline text="Baixar CV" :function-click="downloadCV" />
+        <ButtonOutline text="Visualizar  CV" :function-click="downloadCV" />
     </ContainerPage>
 </template>
 
@@ -43,16 +43,32 @@
 import { defineComponent } from 'vue';
 import ContainerPage from '@/components/ContainerPage.vue';
 import ButtonOutline from '@/components/ButtonOutline.vue';
+import ResizeImg from '@/components/ResizeImg.vue';
+
+import profileMobile from '@/assets/images/profile-mobile.png';
+import profileLaptop from '@/assets/images/profile-laptop.png';
 
 export default defineComponent({
     name: 'Home',
-    components: { ContainerPage, ButtonOutline },
+    components: { ContainerPage, ButtonOutline, ResizeImg },
+    data() {
+        return {
+            isWideScreen: window.innerWidth > 769,
+            profileMobile,
+            profileLaptop
+        };
+    },
+    computed: {
+        profilePath(): string {
+            return this.isWideScreen ? profileLaptop : profileMobile;
+        }
+    },
     methods: {
-        redirectSocialMedia(link: string){
+        redirectSocialMedia(link: string) {
             window.location.href = link;
         },
-        downloadCV(){
-            console.log('deve baixar o curriculo')
+        downloadCV() {
+            window.location.assign("https://docs.google.com/document/d/10bWGnK8tAy7Bzy1uXlVvVUZK5G7sWRkfU8MbLLbbqAg/edit");
         }
     }
 });
@@ -105,19 +121,19 @@ export default defineComponent({
     font-weight: 600;
 }
 
-.area-icons{
+.area-icons {
     display: flex;
     gap: 10px;
 }
 
-.area-icons button{
+.area-icons button {
     background: transparent;
     border: none;
     padding: 0;
     margin: 0;
 }
 
-.img-footer{
+.img-footer {
     width: 100%;
     position: absolute;
     bottom: 0;

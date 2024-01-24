@@ -1,20 +1,36 @@
 <template>
     <ContainerPage>
-        <img :src="imageWorkWomen" alt="mulher cartoon trabalhando com design">
-        <div class="area-desc">
-            <TitleDefault text="Sobre" />
-            <p>
-                Sou <span>Product Designer</span> com uma pitada de conhecimento em desenvolvimento front-end. Graduanda em Ciência da
-                Computação pela Universidade do Estado do Amazonas (UEA) e com formações por meio de cursos e livros em
-                <span>Experiência do Usuário.</span> Desde criança, meu interesse pelo design foi influenciado por meus pais, fotógrafos,
-                e cresci explorando ferramentas como Adobe Photoshop, Corel Draw e Adobe Lightroom, alimentando minha
-                criatividade. Em 2023, descobri o universo da Experiência do Usuário e tenho me dedicado a aprender através
-                de cursos, leituras e prática. Adquiri <span>habilidades</span> em: Pesquisas com usuários, Criação de personas e
-                proto-personas, Metodologia do Design Thinking, Design de Interface (UI), Criação de protótipos de baixa,
-                média e alta fidelidade (Wireframes), Tipografia, Teoria das cores, Styleguide, Design System, Design Token,
-                Acessibilidade, Hierarquia e Figma. Estou ansiosa para aplicar minha experiência e conhecimento em projetos
-                desafiadores e contribuir para a criação de experiências significativas para os usuários.
-            </p>
+        <TitleDefault text="Sobre" />
+        <div class="content-about">
+            <ResizeImg :img-mobile="workWomenMobile" :img-laptop="workWomenLaptop"
+                text-alt="mulher cartoon trabalhando com design" />
+            <div class="area-desc">
+                <p>
+                    Sou <span>Product Designer</span> com uma pitada de conhecimento em desenvolvimento front-end. Graduanda em
+                    Ciência da
+                    Computação pela Universidade do Estado do Amazonas (UEA) e com formações por meio de cursos e livros em
+                    <span>Experiência do Usuário.</span>
+                </p>
+                <p>
+                    Desde criança, meu interesse pelo design foi influenciado por meus pais, fotógrafos,
+                    e cresci explorando ferramentas como Adobe Photoshop, Corel Draw e Adobe Lightroom, alimentando minha
+                    criatividade.
+                </p>
+                <p>
+                    Em 2023, descobri o universo da Experiência do Usuário e tenho me dedicado a aprender através
+                    de cursos, leituras e prática.
+                </p>
+                <p>
+                    Adquiri <span>habilidades</span> em: Pesquisas com usuários, Criação de personas e
+                    proto-personas, Metodologia do Design Thinking, Design de Interface (UI), Criação de protótipos de baixa,
+                    média e alta fidelidade (Wireframes), Tipografia, Teoria das cores, Styleguide, Design System, Design Token,
+                    Acessibilidade, Hierarquia e Figma.
+                </p>
+                <p>
+                    Estou ansiosa para aplicar minha experiência e conhecimento em projetos
+                    desafiadores e contribuir para a criação de experiências significativas para os usuários.
+                </p>
+            </div>
         </div>
     </ContainerPage>
 </template>
@@ -23,21 +39,24 @@
 import { defineComponent } from 'vue';
 import ContainerPage from '@/components/ContainerPage.vue';
 import TitleDefault from '@/components/TitleDefault.vue';
+import ResizeImg from '@/components/ResizeImg.vue';
 
 import workWomenLaptop from '@/assets/images/work-women-laptop.svg';
 import workWomenMobile from '@/assets/images/work-women-mobile.svg';
 
 export default defineComponent({
     name: 'About',
-    components: { ContainerPage, TitleDefault },
+    components: { ContainerPage, TitleDefault, ResizeImg },
     data() {
         return {
             isWideScreen: window.innerWidth > 769,
+            workWomenMobile,
+            workWomenLaptop
         };
     },
     computed: {
-        imageWorkWomen(): string{
-            return this.isWideScreen ? workWomenLaptop : workWomenMobile;  
+        imageWorkWomen(): string {
+            return this.isWideScreen ? workWomenLaptop : workWomenMobile;
         }
     }
 });
@@ -46,7 +65,17 @@ export default defineComponent({
 <style scoped>
 @import '@/assets/main.css';
 
-p{
+.content-about{
+    margin-bottom: 114px;
+}
+
+.area-desc, .content-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
     margin-top: 16px;
     color: var(--color-black);
     font-size: 12px;
@@ -54,17 +83,24 @@ p{
     text-align: justify;
 }
 
-span{
+span {
     color: var(--color-blue);
     font-weight: 700;
 }
 
-.area-desc{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-@media screen and (min-width: 796px){
+@media screen and (min-width: 796px) {
+    .content-about{
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 26px;
+        align-items: center;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 28px;
+    }
 }
 </style>

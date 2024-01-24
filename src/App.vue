@@ -1,9 +1,11 @@
 <template>
     <main class="general-container">
-        <Navbar />
-        <router-view></router-view>
+        <div>
+            <Navbar />
+            <router-view></router-view>
+        </div>
+        <FooterDefault />
     </main>
-    <FooterDefault />
 </template>
 
 <script lang="ts">
@@ -19,16 +21,18 @@ export default defineComponent({
 
 <style scoped>
 @import '@/assets/main.css';
-
-.general-container {
-    padding: 16px 32px;
-    margin-bottom: 46px;
+.general-container div {
+    padding: 16px;
 }
 
-@media screen and (min-width: 796px){
-    .general-container{
+@media screen and (min-width: 796px) {
+    .general-container {
         max-width: 1128px;
-        margin: 0 auto;
+        margin: 0 auto
+    }
+
+    .general-container div{
+        margin-bottom: 200px;
     }
 }
 </style>
