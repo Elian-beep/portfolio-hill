@@ -37,7 +37,7 @@ export default defineComponent({
 
 .logo-title {
     color: var(--color-black);
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 600;
 }
 

@@ -8,7 +8,7 @@
             <div class="area-texts">
                 <div class="area-role">
                     <h1>Linda Souza!</h1>
-                    <h3>Product Designer Júnior (UX/UI)</h3>
+                    <h3>Product Designer (UX/UI)</h3>
                 </div>
                 <p>
                     Sou apaixonada pelo universo da Experiência do Usuário, com uma pitada de conhecimento em
@@ -138,7 +138,7 @@ export default defineComponent({
 
 .area-button{
     z-index: 99;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 @media screen and (min-width: 796px) {
