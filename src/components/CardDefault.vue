@@ -39,7 +39,7 @@ export default defineComponent({
         }
     },
     methods: {
-        goToLink(){
+        goToLink() {
             window.location.assign(this.link);
         }
     }
@@ -64,7 +64,7 @@ export default defineComponent({
     height: 140px;
 }
 
-.area-texts{
+.area-texts {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -75,16 +75,27 @@ export default defineComponent({
     font-size: 14px;
     font-weight: 600;
     color: var(--color-blue);
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
 }
 
 .text-card {
     font-size: 12px;
     color: var(--color-black);
     font-weight: 400;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
 }
 
 @media screen and (min-width: 796px) {
-    .container-card{
+    .container-card {
         width: 30%;
     }
 

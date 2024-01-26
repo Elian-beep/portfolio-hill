@@ -7,7 +7,7 @@
             <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaChuva" title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch" />
             <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaAgendaConsultas"
                 title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch" />
-            <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaChuva" title="Agenda de Consultas" />
+            <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaChuva" title="Agenda de Consultas jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj" />
             <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaAgendaConsultas"
                 title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch" />
             <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaChuva" title="Agenda de Consultas" />
