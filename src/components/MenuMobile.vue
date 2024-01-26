@@ -10,7 +10,7 @@
             <ul>
                 <li class="nav-item"><a @click="selectLink('/')" href="#" class="nav-link">Home</a></li>
                 <li class="nav-item"><a @click="selectLink('/about')" href="#" class="nav-link">Sobre</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a @click="selectLink('/projects')" href="#" class="nav-link">Projetos</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Currículo</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>

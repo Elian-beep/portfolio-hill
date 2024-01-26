@@ -22,7 +22,7 @@ export default defineComponent({
 <style scoped>
 @import '@/assets/main.css';
 .general-container div {
-    padding: 16px;
+    padding: 32px;
 }
 
 @media screen and (min-width: 796px) {

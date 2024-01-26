@@ -4,7 +4,8 @@
                 class="nav-link">Home</a></li>
         <li :class="{ 'active': currentPath == '/about' }" class="nav-item"><a @click="selectLink('/about')" href="#"
                 class="nav-link">Sobre</a></li>
-        <li :class="{ active: currentPath == '/projects' }" class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+        <li :class="{ 'active': currentPath == '/projects' }" class="nav-item"><a @click="selectLink('/projects')" href="#" class="nav-link">Projetos</a>
+        </li>
         <li :class="{ active: currentPath == '/articles' }" class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
         <li :class="{ active: currentPath == '/curriculum' }" class="nav-item"><a href="#" class="nav-link">Currículo</a>
         </li>
@@ -45,7 +46,7 @@ export default defineComponent({
     list-style: none;
 }
 
-.nav-item:hover{
+.nav-item:hover {
     border-bottom: 1px solid var(--color-blue);
 }
 
@@ -58,11 +59,11 @@ export default defineComponent({
     font-weight: 400;
 }
 
-.active{
+.active {
     border-bottom: 2px solid var(--color-orange);
 }
 
-.active a{
+.active a {
     color: var(--color-blue);
     font-weight: 700;
 }
