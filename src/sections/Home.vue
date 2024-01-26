@@ -99,7 +99,7 @@ export default defineComponent({
 
 .area-texts p {
     color: var(--color-black);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     text-align: justify;

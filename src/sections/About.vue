@@ -78,8 +78,9 @@ export default defineComponent({
 p {
     margin-top: 16px;
     color: var(--color-black);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
+    line-height: 20px;
     text-align: justify;
 }
 
