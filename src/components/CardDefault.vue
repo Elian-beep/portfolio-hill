@@ -58,8 +58,6 @@ export default defineComponent({
     cursor: pointer;
 }
 
-.box-img {}
-
 .box-img img {
     border-radius: 10px 10px 0 0;
     width: 100%;
@@ -85,5 +83,18 @@ export default defineComponent({
     font-weight: 400;
 }
 
-@media screen and (min-width: 796px) {}
+@media screen and (min-width: 796px) {
+    .container-card{
+        width: 30%;
+    }
+
+    /* .title-card{
+        height: 30px; 
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    } */
+
+}
 </style>

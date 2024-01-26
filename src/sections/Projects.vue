@@ -4,7 +4,7 @@
         <div class="container-projects">
             <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaAgendaConsultas"
                 title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch" />
-            <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaChuva" title="Agenda de Consultas" />
+            <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaChuva" title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch" />
             <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaAgendaConsultas"
                 title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch" />
             <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaChuva" title="Agenda de Consultas" />
@@ -52,5 +52,11 @@ export default defineComponent({
     margin-bottom: 80px;
 }
 
-@media screen and (min-width: 796px) {}
+@media screen and (min-width: 796px) {
+    .container-projects{
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: 40px;
+    }
+}
 </style>
