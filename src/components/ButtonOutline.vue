@@ -19,7 +19,7 @@ export default defineComponent({
             required: true
         }
     }
-});
+}); 
 </script>
 
 <style scoped>
@@ -28,14 +28,14 @@ export default defineComponent({
 button{
     min-width: 100%;
     padding: 12px 16px;
-    background: var(--color-white);
+    background: var(--color-orange);
     border-radius: 10px;
     border: 1px solid var(--color-orange);
 
     color: var(--color-blue);
     font-size: 14px;
     font-weight: 600;
-    z-index: 99;
+    z-index: 99;   
 }
 
 </style>

@@ -15,6 +15,8 @@
                     desenvolvimento
                     front-end. Foco em resolver problemas e criar produtos digitais que fazem a diferença, utilizando
                     ferramentas e processos de UX/UI centradas na experiência do usuário.
+                </p>
+                <p>
                     Estou sempre aberta a novos desafios e oportunidades de aprendizado, pronta para trazer minha paixão
                     pela UX/UI para a mesa e contribuir com energia positiva em projetos super legais!
                 </p>
@@ -82,12 +84,12 @@ export default defineComponent({
 .area-desc {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
 }
 
 .area-desc span {
     color: var(--color-black);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -139,6 +141,7 @@ export default defineComponent({
 .area-button{
     z-index: 99;
     margin-bottom: 80px;
+    margin-top: 16px;
 }
 
 @media screen and (min-width: 796px) {

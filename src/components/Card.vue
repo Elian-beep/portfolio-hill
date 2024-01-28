@@ -1,16 +1,14 @@
 <template>
-    <div @click="goToLink" class="container-card">
-        <div class="box-img">
-            <img :src="imgCard" alt="Capa de projeto/artigo">
+    <div @click="goToLink" class="content-card">
+        <div class="area-img">
+            <img :src="imgCard" alt="capa de projeto/artigo">
         </div>
-        <div class="area-texts">
-            <span class="title-card">
-                {{ title }}
-            </span>
-            <p class="text-card">
-                {{ description }}
-            </p>
-        </div>
+        <span class="title">
+            {{ title }}
+        </span>
+        <p class="description">
+            {{ description }}
+        </p>
     </div>
 </template>
 
@@ -18,7 +16,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: 'CardDefault',
+    name: 'Card',
     components: {},
     props: {
         imgCard: {
@@ -49,32 +47,33 @@ export default defineComponent({
 <style scoped>
 @import '@/assets/main.css';
 
-.container-card {
-    border-radius: 10px;
-    background: var(--color-gray);
+.content-card {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
+    background: var(--color-gray);
+    padding: 12px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
-.box-img img {
-    border-radius: 10px 10px 0 0;
+.area-img {
     width: 100%;
-    height: 140px;
+    height: 128px;
+    background-color: var(--color-white);
 }
 
-.area-texts {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 0 12px 12px 12px;
+.area-img img {
+    border-radius: 5px;
+    height: 128px;
+    z-index: -9;
+    width: 100%;
 }
 
-.title-card {
+.title {
+    color: var(--color-blue);
     font-size: 14px;
     font-weight: 600;
-    color: var(--color-blue);
 
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -83,29 +82,29 @@ export default defineComponent({
     -webkit-line-clamp: 2;
 }
 
-.text-card {
-    font-size: 12px;
+.description {
     color: var(--color-black);
+    font-size: 12px;
     font-weight: 400;
 
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
     overflow: hidden;
     -webkit-line-clamp: 4;
 }
 
 @media screen and (min-width: 796px) {
-    .container-card {
-        width: 30%;
+    .content-card{
+        width: 224px;
     }
 
-    /* .title-card{
-        height: 30px; 
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 100%;
-    } */
+    .title{
+        font-size: 16px;
+    }
 
+    .description{
+        font-size: 14px;
+    }
 }
 </style>

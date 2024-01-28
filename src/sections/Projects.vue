@@ -2,15 +2,54 @@
     <ContainerPage>
         <TitleDefault text="Projetos" />
         <div class="container-projects">
-            <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaAgendaConsultas"
-                title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch" />
-            <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaChuva" title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch" />
-            <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaAgendaConsultas"
-                title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch" />
-            <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaChuva" title="Agenda de Consultas jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj" />
-            <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaAgendaConsultas"
-                title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch" />
-            <CardDefault link="https://sites.google.com/view/lindasouza" :description="description" :img-card="capaChuva" title="Agenda de Consultas" />
+            <Card 
+                :description="description"
+                :img-card="capaAgendaConsultas"
+                link="https://sites.google.com/view/lindasouza"
+                title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch para mais uma terceira linha no titulo"
+            />
+            <Card 
+                :description="description"
+                :img-card="capaAgendaConsultas"
+                link="https://sites.google.com/view/lindasouza"
+                title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch"
+            />
+            <Card 
+                :description="description"
+                :img-card="capaChuva"
+                link="https://sites.google.com/view/lindasouza"
+                title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch para mais uma terceira linha no titulo"
+            />
+            <Card 
+                :description="description"
+                :img-card="capaChuva"
+                link="https://sites.google.com/view/lindasouza"
+                title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch"
+            />
+            <Card 
+                :description="description"
+                :img-card="capaChuva"
+                link="https://sites.google.com/view/lindasouza"
+                title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch"
+            />
+            <Card 
+                :description="description"
+                :img-card="capaChuva"
+                link="https://sites.google.com/view/lindasouza"
+                title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch"
+            />
+            <Card 
+                :description="description"
+                :img-card="capaChuva"
+                link="https://sites.google.com/view/lindasouza"
+                title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch"
+            />
+            <Card 
+                :description="description"
+                :img-card="capaChuva"
+                link="https://sites.google.com/view/lindasouza"
+                title="Estudo de caso UX/UI: Plataforma de video aula Code Scratch"
+            />
         </div>
     </ContainerPage>
 </template>
@@ -19,14 +58,14 @@
 import { defineComponent } from 'vue';
 import ContainerPage from '@/components/ContainerPage.vue';
 import TitleDefault from '@/components/TitleDefault.vue';
-import CardDefault from '@/components/CardDefault.vue';
+import Card from '@/components/Card.vue';
 
 import capaAgendaConsultas from '@/assets/images/capas/capa_Agenda_de_Consultas.png';
 import capaChuva from '@/assets/images/capas/capa_Exercicio_-_Chuva.png';
 
 export default defineComponent({
     name: 'Projects',
-    components: { ContainerPage, TitleDefault, CardDefault },
+    components: { ContainerPage, TitleDefault, Card },
     data() {
         return {
             capaAgendaConsultas,
@@ -56,7 +95,7 @@ export default defineComponent({
     .container-projects{
         flex-wrap: wrap;
         flex-direction: row;
-        margin-bottom: 40px;
+        margin-bottom: -10px;
     }
 }
 </style>
