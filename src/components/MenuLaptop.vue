@@ -4,9 +4,11 @@
                 class="nav-link">Home</a></li>
         <li :class="{ 'active': currentPath == '/about' }" class="nav-item"><a @click="selectLink('/about')" href="#"
                 class="nav-link">Sobre</a></li>
-        <li :class="{ 'active': currentPath == '/projects' }" class="nav-item"><a @click="selectLink('/projects')" href="#" class="nav-link">Projetos</a>
+        <li :class="{ 'active': currentPath == '/projects' }" class="nav-item"><a @click="selectLink('/projects')" href="#"
+                class="nav-link">Projetos</a>
         </li>
-        <li :class="{ active: currentPath == '/articles' }" class="nav-item"><a href="#" class="nav-link">Artigos</a></li>
+        <li :class="{ active: currentPath == '/articles' }" class="nav-item"><a @click="selectLink('/articles')" href="#"
+                class="nav-link">Artigos</a></li>
         <li :class="{ active: currentPath == '/curriculum' }" class="nav-item"><a href="#" class="nav-link">Currículo</a>
         </li>
         <li :class="{ active: currentPath == '/contact' }" class="nav-item"><a href="#" class="nav-link">Contato</a></li>
