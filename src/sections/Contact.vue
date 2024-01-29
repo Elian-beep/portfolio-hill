@@ -74,5 +74,14 @@ export default defineComponent({
     gap: 16px;
 }
 
-@media screen and (min-width: 796px) {}
+@media screen and (min-width: 796px) {
+    .invite-text{
+        font-size: 18px;
+    }
+
+    .area-links{
+        flex-direction: row;
+        gap: 24px;
+    }
+}
 </style>
