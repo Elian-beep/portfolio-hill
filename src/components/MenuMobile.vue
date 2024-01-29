@@ -12,8 +12,8 @@
                 <li class="nav-item"><a @click="selectLink('/about')" href="#" class="nav-link">Sobre</a></li>
                 <li class="nav-item"><a @click="selectLink('/projects')" href="#" class="nav-link">Projetos</a></li>
                 <li class="nav-item"><a @click="selectLink('/articles')" href="#" class="nav-link">Artigos</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Currículo</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a @click="downloadCV" href="#" class="nav-link">Currículo</a></li>
+                <li class="nav-item"><a @click="selectLink('/contact')" href="#" class="nav-link">Contato</a></li>
             </ul>
         </div>
     </div>
@@ -36,7 +36,10 @@ export default defineComponent({
         selectLink(path: string){
             this.onHandleMenu();
             this.$router.push({path: path});
-        }
+        },
+        downloadCV() {
+            window.location.assign("https://docs.google.com/document/d/10bWGnK8tAy7Bzy1uXlVvVUZK5G7sWRkfU8MbLLbbqAg/edit");
+        },
     }
 });
 </script>

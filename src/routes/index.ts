@@ -3,6 +3,7 @@ import HomeVue from '@/sections/Home.vue';
 import AboutVue from '@/sections/About.vue';
 import ProjectsVue from '@/sections/Projects.vue';
 import ArticlesVue from '@/sections/Articles.vue';
+import ContactVue from '@/sections/Contact.vue';
 
 const routes: RouteRecordRaw[] = [
     {
@@ -18,6 +19,9 @@ const routes: RouteRecordRaw[] = [
     },{
         path: '/articles',
         component: ArticlesVue
+    },{
+        path: '/contact',
+        component: ContactVue
     }
 ];
 
