@@ -43,8 +43,14 @@ export default defineComponent({
     align-items: center;
     gap: 16px;
     padding: 16px;
-    background: var(--color-gray-light);
     border-radius: 10px;
+    cursor: pointer;
+    background: var(--color-gray-min);
+    transition: all .2s ease-in;
+}
+
+.container_card_contact:hover{
+    background: var(--color-gray-light);
 }
 
 .container_card_contact span {

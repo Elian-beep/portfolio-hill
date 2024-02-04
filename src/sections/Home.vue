@@ -37,7 +37,7 @@
                 </button>
             </div>
             <div class="area-button">
-                <ButtonOutline text="Visualizar  CV" :function-click="downloadCV" />
+                <ButtonOutline text="Baixa Currículo" :function-click="downloadCV" />
             </div>
         </div>
     </ContainerPage>

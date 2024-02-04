@@ -66,6 +66,7 @@ export default defineComponent({
     color: var(--color-blue);
     font-weight: 600;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .area-links{
