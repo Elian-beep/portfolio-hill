@@ -38,7 +38,7 @@ export default defineComponent({
             this.$router.push({path: path});
         },
         downloadCV() {
-            window.location.assign("https://docs.google.com/document/d/10bWGnK8tAy7Bzy1uXlVvVUZK5G7sWRkfU8MbLLbbqAg/edit");
+            window.open("https://docs.google.com/document/d/10bWGnK8tAy7Bzy1uXlVvVUZK5G7sWRkfU8MbLLbbqAg/edit", '_blank');
         },
     }
 });

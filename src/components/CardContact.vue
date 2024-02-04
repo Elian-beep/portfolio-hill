@@ -29,7 +29,7 @@ export default defineComponent({
     }, 
     methods: {
         redirectSocialMedia() {
-            window.location.href = this.link;
+            window.open(this.link, '_blank');
         },
     }
 });

@@ -38,7 +38,7 @@ export default defineComponent({
     },
     methods: {
         goToLink() {
-            window.location.assign(this.link);
+            window.open(this.link, '_blank');
         }
     }
 });
