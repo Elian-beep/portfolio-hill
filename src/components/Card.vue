@@ -48,13 +48,20 @@ export default defineComponent({
 @import '@/assets/main.css';
 
 .content-card {
+    width: 220px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    background: var(--color-gray);
+    background: var(--color-white);
     padding: 12px;
     border-radius: 10px;
     cursor: pointer;
+    border: 2px solid var(--color-gray);
+    transition: all .2s ease-in;
+}
+
+.content-card:hover{
+    border-color: var(--color-orange);
 }
 
 .area-img {
@@ -83,7 +90,7 @@ export default defineComponent({
 }
 
 .description {
-    color: var(--color-black);
+    color: var(--color-gray);
     font-size: 12px;
     font-weight: 400;
 
@@ -95,9 +102,6 @@ export default defineComponent({
 }
 
 @media screen and (min-width: 796px) {
-    .content-card{
-        width: 224px;
-    }
 
     .title{
         font-size: 16px;

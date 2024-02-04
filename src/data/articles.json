@@ -1,44 +1,9 @@
 [
     {
         "id": 0,
-        "title": "Título do meu artigo aqui",
-        "description": "Lorem ipsum dolor sit amet consect. Turpis habitant tristique viverra arcu non tellus. Sed ullamcorper massa orci in aliquam. Eu sit eleifend duis proin porta morbi pellentesque.",
-        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/capa_Agenda_de_Consultas.png",
-        "link": "https://sites.google.com/view/lindasouza"
-    },
-    {
-        "id": 0,
-        "title": "Título do meu artigo aqui",
-        "description": "Lorem ipsum dolor sit amet consect. Turpis habitant tristique viverra arcu non tellus. Sed ullamcorper massa orci in aliquam. Eu sit eleifend duis proin porta morbi pellentesque.",
-        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/capa_Agenda_de_Consultas.png",
-        "link": "https://sites.google.com/view/lindasouza"
-    },
-    {
-        "id": 0,
-        "title": "Título do meu artigo aqui",
-        "description": "Lorem ipsum dolor sit amet consect. Turpis habitant tristique viverra arcu non tellus. Sed ullamcorper massa orci in aliquam. Eu sit eleifend duis proin porta morbi pellentesque.",
-        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/capa_Agenda_de_Consultas.png",
-        "link": "https://sites.google.com/view/lindasouza"
-    },
-    {
-        "id": 0,
-        "title": "Título do meu artigo aqui",
-        "description": "Lorem ipsum dolor sit amet consect. Turpis habitant tristique viverra arcu non tellus. Sed ullamcorper massa orci in aliquam. Eu sit eleifend duis proin porta morbi pellentesque.",
-        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/capa_Agenda_de_Consultas.png",
-        "link": "https://sites.google.com/view/lindasouza"
-    },
-    {
-        "id": 0,
-        "title": "Título do meu artigo aqui",
-        "description": "Lorem ipsum dolor sit amet consect. Turpis habitant tristique viverra arcu non tellus. Sed ullamcorper massa orci in aliquam. Eu sit eleifend duis proin porta morbi pellentesque.",
-        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/capa_Agenda_de_Consultas.png",
-        "link": "https://sites.google.com/view/lindasouza"
-    },
-    {
-        "id": 0,
-        "title": "Título do meu artigo aqui",
-        "description": "Lorem ipsum dolor sit amet consect. Turpis habitant tristique viverra arcu non tellus. Sed ullamcorper massa orci in aliquam. Eu sit eleifend duis proin porta morbi pellentesque.",
-        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/capa_Agenda_de_Consultas.png",
-        "link": "https://sites.google.com/view/lindasouza"
+        "title": "Explorando as cores: como as percebemos",
+        "description": "O uso de cores vai além do simples embelezamento, pois desempenha um papel fundamental na influência das emoções e na psicologia das pessoas.",
+        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/hport/cores_olho_artigo.jpg",
+        "link": "https://medium.com/@lindassouza/explorando-as-cores-como-as-percebemos-6179ee2f22f6"
     }
 ]

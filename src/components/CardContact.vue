@@ -43,7 +43,7 @@ export default defineComponent({
     align-items: center;
     gap: 16px;
     padding: 16px;
-    background: var(--color-gray);
+    background: var(--color-gray-light);
     border-radius: 10px;
 }
 

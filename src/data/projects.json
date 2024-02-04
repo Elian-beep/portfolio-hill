@@ -1,44 +1,16 @@
 [
     {
         "id": 0,
-        "title": "Título do meu projeto aqui",
-        "description": "Lorem ipsum dolor sit amet consect. Turpis habitant tristique viverra arcu non tellus. Sed ullamcorper massa orci in aliquam. Eu sit eleifend duis proin porta morbi pellentesque.",
-        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/capa_Agenda_de_Consultas.png",
-        "link": "https://sites.google.com/view/lindasouza"
+        "title": "Estudo de caso UX/UI: Plataforma de vídeo aula Code Scratch",
+        "description": "Passo a passo para a criação da plataforma de vídeo aula, Code Scratch, para as alunas do Projeto Coomputação na Escola para Mulheres da UEA.",
+        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/hport/Code_Scratch_capa.jpg",
+        "link": "https://medium.com/@lindassouza/estudo-de-caso-ux-ui-plataforma-de-vídeo-aula-code-scratch-790468be42ef"
     },
     {
-        "id": 0,
-        "title": "Título do meu projeto aqui",
-        "description": "Lorem ipsum dolor sit amet consect. Turpis habitant tristique viverra arcu non tellus. Sed ullamcorper massa orci in aliquam. Eu sit eleifend duis proin porta morbi pellentesque.",
-        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/capa_Agenda_de_Consultas.png",
-        "link": "https://sites.google.com/view/lindasouza"
-    },
-    {
-        "id": 0,
-        "title": "Título do meu projeto aqui",
-        "description": "Lorem ipsum dolor sit amet consect. Turpis habitant tristique viverra arcu non tellus. Sed ullamcorper massa orci in aliquam. Eu sit eleifend duis proin porta morbi pellentesque.",
-        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/capa_Agenda_de_Consultas.png",
-        "link": "https://sites.google.com/view/lindasouza"
-    },
-    {
-        "id": 0,
-        "title": "Título do meu projeto aqui",
-        "description": "Lorem ipsum dolor sit amet consect. Turpis habitant tristique viverra arcu non tellus. Sed ullamcorper massa orci in aliquam. Eu sit eleifend duis proin porta morbi pellentesque.",
-        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/capa_Agenda_de_Consultas.png",
-        "link": "https://sites.google.com/view/lindasouza"
-    },
-    {
-        "id": 0,
-        "title": "Título do meu projeto aqui",
-        "description": "Lorem ipsum dolor sit amet consect. Turpis habitant tristique viverra arcu non tellus. Sed ullamcorper massa orci in aliquam. Eu sit eleifend duis proin porta morbi pellentesque.",
-        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/capa_Agenda_de_Consultas.png",
-        "link": "https://sites.google.com/view/lindasouza"
-    },
-    {
-        "id": 0,
-        "title": "Título do meu projeto aqui",
-        "description": "Lorem ipsum dolor sit amet consect. Turpis habitant tristique viverra arcu non tellus. Sed ullamcorper massa orci in aliquam. Eu sit eleifend duis proin porta morbi pellentesque.",
-        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/capa_Agenda_de_Consultas.png",
-        "link": "https://sites.google.com/view/lindasouza"
+        "id": 1,
+        "title": "Estudo de caso UI: Criação da interface para uma Xiloteca Virtual",
+        "description": "Processo de criação da interface de usuário (UI) de uma Xiloteca Virtual para o curso de Engenharia Florestal da UEA.",
+        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/hport/Xiloteca_capa.jpg",
+        "link": "https://medium.com/@lindassouza/estudo-de-caso-ui-cria%C3%A7%C3%A3o-da-interface-para-uma-xiloteca-virtual-d4a12a9208f6"
     }
 ]
