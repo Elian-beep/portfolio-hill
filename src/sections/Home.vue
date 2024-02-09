@@ -72,7 +72,7 @@ export default defineComponent({
             window.location.href = link;
         },
         downloadCV() {
-            window.location.assign("https://docs.google.com/document/d/10bWGnK8tAy7Bzy1uXlVvVUZK5G7sWRkfU8MbLLbbqAg/edit");
+            window.open("https://docs.google.com/document/d/11Mhqm_i8II19DEpWXh8NlO5_zFM76yC4vPGHVVxFHnE/edit?usp=sharing", '_blank');
         }
     }
 });

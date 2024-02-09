@@ -32,9 +32,9 @@
                     Estou ansiosa para aplicar minha experiência e conhecimento em projetos
                     desafiadores e contribuir para a criação de experiências significativas para os usuários.
                 </p>
-                <div class="area-button">
+                <!-- <div class="area-button">
                     <ButtonOutline text="Baixa Currículo" :function-click="downloadCV" />
-                </div>
+                </div> -->
             </div>
         </div>
     </ContainerPage>

@@ -28,14 +28,20 @@ export default defineComponent({
 button{
     min-width: 100%;
     padding: 12px 16px;
-    background: var(--color-orange);
     border-radius: 10px;
     border: 1px solid var(--color-orange);
-
-    color: var(--color-blue);
+    cursor: pointer;
+    
     font-size: 14px;
     font-weight: 600;
     z-index: 99;   
+    transition: all .2s ease-in;
+    background: var(--color-white);
+    color: var(--color-blue);
+}
+
+button:hover{
+    background: var(--color-orange);
 }
 
 </style>
