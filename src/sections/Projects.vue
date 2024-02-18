@@ -1,17 +1,13 @@
 <template>
-    <ContainerPage>
-        <TitleDefault text="Projetos" />
+    <div></div>
+    <div class="projects-content">
+        <TitleDefault text="Meus projetos" />
         <div class="container-projects">
             <div v-for="project of projects" :key="project.id">
-                <Card 
-                    :description="project.description"
-                    :img-card="project.img"
-                    :link="project.link"
-                    :title="project.title"
-                />
+                <Card :description="project.description" :img-card="project.img" :link="project.link" :title="project.title" />
             </div>
         </div>
-    </ContainerPage>
+    </div>
 </template>
 
 <script lang="ts">
@@ -35,16 +31,23 @@ export default defineComponent({
 <style scoped>
 @import '@/assets/main.css';
 
+.projects-content {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
 .container-projects {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    margin-bottom: 80px;
+    width: 100%;
 }
 
 @media screen and (min-width: 796px) {
-    .container-projects{
+    .container-projects {
         flex-wrap: wrap;
         flex-direction: row;
         margin-bottom: -10px;

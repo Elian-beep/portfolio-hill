@@ -48,7 +48,6 @@ export default defineComponent({
 @import '@/assets/main.css';
 
 .content-card {
-    width: 220px;
     display: flex;
     flex-direction: column;
     gap: 12px;

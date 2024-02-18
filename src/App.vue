@@ -6,6 +6,7 @@
             <ContainerPage>
                 <Home />
                 <About />
+                <Projects />
             </ContainerPage>
         </div>
         <!-- <FooterDefault /> -->
@@ -20,10 +21,11 @@ import FooterDefault from './components/FooterDefault.vue';
 import ContainerPage from './components/ContainerPage.vue';
 import Home from './sections/Home.vue';
 import About from './sections/About.vue';
+import Projects from './sections/Projects.vue';
 
 export default defineComponent({
     name: '',
-    components: { Navbar, FooterDefault, ContainerPage, Home, About },
+    components: { Navbar, FooterDefault, ContainerPage, Home, About, Projects },
 });
 </script>
 

@@ -3,14 +3,21 @@
         "id": 0,
         "title": "Estudo de caso UX/UI: Plataforma de vídeo aula Code Scratch",
         "description": "Passo a passo para a criação da plataforma de vídeo aula, Code Scratch, para as alunas do Projeto Coomputação na Escola para Mulheres da UEA.",
-        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/hport/Code_Scratch_capa.jpg",
+        "img": "https://raw.githubusercontent.com/Elian-beep/assets_icons/main/assets_hport/codescratch.png",
         "link": "https://medium.com/@lindassouza/estudo-de-caso-ux-ui-plataforma-de-vídeo-aula-code-scratch-790468be42ef"
     },
     {
         "id": 1,
         "title": "Estudo de caso UI: Criação da interface para uma Xiloteca Virtual",
-        "description": "Processo de criação da interface de usuário (UI) de uma Xiloteca Virtual para o curso de Engenharia Florestal da UEA.",
-        "img": "https://raw.githubusercontent.com/Elian-beep/assets-online/main/hport/Xiloteca_capa.jpg",
+        "description": "Processo de criação da interface de usuário (UI) de uma Xiloteca Virtual para ajudar os alunos do curso de Engenharia Florestal da UEA em suas pesquisas sobre amostras de madeiras.",
+        "img": "https://raw.githubusercontent.com/Elian-beep/assets_icons/main/assets_hport/xiloteca.jpg",
         "link": "https://medium.com/@lindassouza/estudo-de-caso-ui-cria%C3%A7%C3%A3o-da-interface-para-uma-xiloteca-virtual-d4a12a9208f6"
+    },
+    {
+        "id": 2,
+        "title": "Estudo de caso (UX/UI): Currículo de Bolso",
+        "description": "Passo a passo do processo de experiência do usuário (UX) e criação da interface do usuário (UI) do aplicativo “Currículo de Bolso” para criação e geração de currículos em PDF.",
+        "img": "https://raw.githubusercontent.com/Elian-beep/assets_icons/main/assets_hport/curriculo_de_bolso.png",
+        "link": "https://medium.com/@lindassouza/estudo-de-caso-ux-ui-currículo-de-bolso-98012ed62135"
     }
 ]
