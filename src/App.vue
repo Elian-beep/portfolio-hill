@@ -2,9 +2,12 @@
     <main class="general-container">
         <div>
             <Navbar />
-            <router-view></router-view>
+            <!-- <router-view></router-view> -->
+            <ContainerPage>
+                <Home />
+            </ContainerPage>
         </div>
-        <FooterDefault />
+        <!-- <FooterDefault /> -->
     </main>
 </template>
 
@@ -13,9 +16,12 @@ import { defineComponent } from 'vue';
 import Navbar from './components/Navbar.vue';
 import FooterDefault from './components/FooterDefault.vue';
 
+import ContainerPage from './components/ContainerPage.vue';
+import Home from './sections/Home.vue';
+
 export default defineComponent({
     name: '',
-    components: { Navbar, FooterDefault },
+    components: { Navbar, FooterDefault, ContainerPage, Home },
 });
 </script>
 

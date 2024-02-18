@@ -1,6 +1,6 @@
 <template>
     <main>
-        <section :class="{ styleHome : styleHome }">
+        <section>
             <slot></slot>
         </section>
     </main>
@@ -13,12 +13,6 @@ import Navbar from '@/components/Navbar.vue';
 export default defineComponent({
     name: 'ContainerPage',
     components: { Navbar },
-    props: {
-        styleHome: {
-            type: Boolean,
-            required: false,
-        }
-    }
 });
 </script>
 
@@ -28,7 +22,6 @@ export default defineComponent({
 main {
     padding-top: 24px;
     max-width: 1128px;
-    margin-bottom: 20px;
 }
 
 section{

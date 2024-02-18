@@ -1,52 +1,33 @@
 <template>
-    <ContainerPage :style-home="true">
-        <div>
-            <ResizeImg :img-mobile="profileMobile" :img-laptop="profileLaptop" text-alt="Imagem de perfil" />
-        </div>
-        <div class="area-desc">
+    <div>
+        <ResizeImg :img-mobile="profileMobile" :img-laptop="profileLaptop" text-alt="Imagem de perfil" />
+    </div>
+    <div class="area-desc">
+        <div class="area-role">
             <span>Oioi! Eu sou a</span>
-            <div class="area-texts">
-                <div class="area-role">
-                    <h1>Linda Souza!</h1>
-                    <h3>Product Designer (UX/UI)</h3>
-                </div>
-                <p>
-                    Sou apaixonada pelo universo da Experiência do Usuário, com uma pitada de conhecimento em
-                    desenvolvimento
-                    front-end. Foco em resolver problemas e criar produtos digitais que fazem a diferença, utilizando
-                    ferramentas e processos de UX/UI centradas na experiência do usuário.
-                </p>
-                <p>
-                    Estou sempre aberta a novos desafios e oportunidades de aprendizado, pronta para trazer minha paixão
-                    pela UX/UI para a mesa e contribuir com energia positiva em projetos super legais!
-                </p>
-                <span>Vamos criar experiências incríveis juntos?</span>
-            </div>
-            <div class="area-icons">
-                <button @click="redirectSocialMedia('https://www.linkedin.com/in/lindassouza/')">
-                    <img src="@/assets/icons/linkedin-com.svg" />
-                </button>
-                <button @click="redirectSocialMedia('https://medium.com/@lindassouza')">
-                    <img src="@/assets/icons/medium-com.svg" />
-                </button>
-                <button @click="redirectSocialMedia('http://www.behance.net/lindassouza')">
-                    <img src="@/assets/icons/behance-com.svg" />
-                </button>
-                <button @click="redirectSocialMedia('mailto:linda.15brandao@gmail.com')">
-                    <img src="@/assets/icons/gmail-com.svg" />
-                </button>
-            </div>
-            <div class="area-button">
-                <ButtonOutline text="Baixa Currículo" :function-click="downloadCV" />
-            </div>
+            <h1>Linda Souza!</h1>
+            <h3>Product Designer (UX/UI)</h3>
         </div>
-    </ContainerPage>
+        <p>
+            Sou apaixonada pelo universo da Experiência do Usuário, com uma pitada de conhecimento em
+            desenvolvimento
+            front-end. Foco em resolver problemas e criar produtos digitais que fazem a diferença, utilizando
+            ferramentas e processos de UX/UI centradas na experiência do usuário.
+        </p>
+        <span>Vamos criar experiências incríveis juntos?</span>
+        <div class="area-button">
+            <ButtonDefault pre-style="solid" text="Entrar em contato" :function-click="downloadCV" />
+        </div>
+        <div class="area-button">
+            <ButtonDefault pre-style="outline" text="Baixar Currículo" :function-click="() => null" />
+        </div>
+    </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import ContainerPage from '@/components/ContainerPage.vue';
-import ButtonOutline from '@/components/ButtonOutline.vue';
+import ButtonDefault from '@/components/ButtonDefault.vue';
 import ResizeImg from '@/components/ResizeImg.vue';
 
 import profileMobile from '@/assets/images/profile-mobile.png';
@@ -54,7 +35,7 @@ import profileLaptop from '@/assets/images/profile-laptop.png';
 
 export default defineComponent({
     name: 'Home',
-    components: { ContainerPage, ButtonOutline, ResizeImg },
+    components: { ContainerPage, ButtonDefault, ResizeImg },
     data() {
         return {
             isWideScreen: window.innerWidth > 769,
@@ -87,30 +68,16 @@ export default defineComponent({
     gap: 16px;
 }
 
-.area-desc span {
-    color: var(--color-black);
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.area-texts {
+.area-role {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 4px;
 }
 
-.area-texts p {
-    color: var(--color-black);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    text-align: justify;
-}
-
-.area-texts span {
+.area-role span {
     color: var(--color-blue);
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .area-role h1 {
@@ -121,27 +88,17 @@ export default defineComponent({
 
 .area-role h3 {
     color: var(--color-blue);
+    font-style: italic;
     font-size: 16px;
     font-weight: 600;
 }
 
-.area-icons {
-    display: flex;
-    gap: 10px;
-}
-
-.area-icons button {
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-}
-
-.area-button{
-    z-index: 99;
-    margin-bottom: 80px;
-    margin-top: 16px;
+.area-desc p {
+    color: var(--color-black);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: justify;
 }
 
 @media screen and (min-width: 796px) {
@@ -175,7 +132,7 @@ export default defineComponent({
         gap: 16px;
     }
 
-    .area-button{
+    .area-button {
         max-width: 364px;
     }
 }

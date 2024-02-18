@@ -33,7 +33,7 @@
                     desafiadores e contribuir para a criação de experiências significativas para os usuários.
                 </p>
                 <!-- <div class="area-button">
-                    <ButtonOutline text="Baixa Currículo" :function-click="downloadCV" />
+                    <ButtonDefault text="Baixa Currículo" :function-click="downloadCV" />
                 </div> -->
             </div>
         </div>
@@ -45,14 +45,14 @@ import { defineComponent } from 'vue';
 import ContainerPage from '@/components/ContainerPage.vue';
 import TitleDefault from '@/components/TitleDefault.vue';
 import ResizeImg from '@/components/ResizeImg.vue';
-import ButtonOutline from '@/components/ButtonOutline.vue';
+import ButtonDefault from '@/components/ButtonDefault.vue';
 
 import profileMobile from '@/assets/images/profile-mobile.png';
 import profileLaptop from '@/assets/images/profile-laptop.png';
 
 export default defineComponent({
     name: 'About',
-    components: { ContainerPage, TitleDefault, ResizeImg, ButtonOutline },
+    components: { ContainerPage, TitleDefault, ResizeImg, ButtonDefault },
     data() {
         return {
             isWideScreen: window.innerWidth > 769,

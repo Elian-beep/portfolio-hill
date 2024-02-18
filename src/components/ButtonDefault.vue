@@ -1,5 +1,5 @@
 <template>
-    <button @click="functionClick()">
+    <button :class="preStyle" @click="functionClick()">
         {{ text }}
     </button>
 </template>
@@ -8,7 +8,7 @@
 import {defineComponent} from 'vue';
 
 export default defineComponent({
-    name: 'ButtonOutline',
+    name: 'ButtonDefault',
     props: {
         text: {
             type: String,
@@ -17,6 +17,10 @@ export default defineComponent({
         functionClick: {
             type: Function,
             required: true
+        },
+        preStyle: {
+            type: String,
+            required: true,
         }
     }
 }); 
@@ -27,21 +31,24 @@ export default defineComponent({
 
 button{
     min-width: 100%;
-    padding: 12px 16px;
+    padding: 16px;
     border-radius: 10px;
-    border: 1px solid var(--color-orange);
     cursor: pointer;
     
     font-size: 14px;
     font-weight: 600;
-    z-index: 99;   
     transition: all .2s ease-in;
-    background: var(--color-white);
     color: var(--color-blue);
 }
 
-button:hover{
-    background: var(--color-orange);
+.outline{
+    background: var(--color-white);
+    border: 1px solid var(--color-orange);
+}
+
+.solid{
+    background: var(--color-orange-min);
+    border: 1px solid var(--color-orange);
 }
 
 </style>
