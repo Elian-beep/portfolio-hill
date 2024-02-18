@@ -78,7 +78,7 @@ export default defineComponent({
 
 .title {
     color: var(--color-blue);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
 
     display: -webkit-box;
@@ -90,8 +90,8 @@ export default defineComponent({
 
 .description {
     color: var(--color-gray);
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 500;
 
     display: -webkit-box;
     -webkit-box-orient: vertical;

@@ -1,7 +1,8 @@
 <template>
-    <ContainerPage>
+    <div></div>
+    <div class="articles-container">
         <TitleDefault text="Artigos" />
-        <div class="container-articles">
+        <div class="articles-content">
             <div v-for="article of articles" :key="article.id">
                 <Card 
                     :description="article.description"
@@ -11,7 +12,7 @@
                 />
             </div>
         </div>
-    </ContainerPage>
+    </div>
 </template>
 
 <script lang="ts">
@@ -35,12 +36,18 @@ export default defineComponent({
 <style scoped>
 @import '@/assets/main.css';
 
-.container-articles {
+.articles-container{
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.articles-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    margin-bottom: 80px;
 }
 
 @media screen and (min-width: 796px){

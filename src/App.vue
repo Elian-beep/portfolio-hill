@@ -7,9 +7,11 @@
                 <Home />
                 <About />
                 <Projects />
+                <Articles />
+                <Contact />
             </ContainerPage>
+            <FooterDefault />
         </div>
-        <!-- <FooterDefault /> -->
     </main>
 </template>
 
@@ -22,17 +24,19 @@ import ContainerPage from './components/ContainerPage.vue';
 import Home from './sections/Home.vue';
 import About from './sections/About.vue';
 import Projects from './sections/Projects.vue';
+import Articles from './sections/Articles.vue';
+import Contact from './sections/Contact.vue';
 
 export default defineComponent({
     name: '',
-    components: { Navbar, FooterDefault, ContainerPage, Home, About, Projects },
+    components: { Navbar, FooterDefault, ContainerPage, Home, About, Projects, Articles, Contact },
 });
 </script>
 
 <style scoped>
 @import '@/assets/main.css';
 .general-container div {
-    padding: 32px;
+    padding: 32px 32px 0 32px;
 }
 
 @media screen and (min-width: 796px) {
