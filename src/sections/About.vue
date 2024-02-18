@@ -1,43 +1,26 @@
 <template>
-    <ContainerPage>
-        <TitleDefault text="Sobre" />
-        <div class="content-about">
-            <ResizeImg :img-mobile="profileMobile" :img-laptop="profileLaptop" text-alt="Imagem de perfil" />
-            <div class="area-desc">
-                <p>
-                    Sou <span>Product Designer</span> com uma pitada de conhecimento em desenvolvimento front-end. Graduanda
-                    em
-                    Ciência da
-                    Computação pela Universidade do Estado do Amazonas (UEA) e com formações por meio de cursos e livros em
-                    <span>Experiência do Usuário.</span>
-                </p>
-                <p>
-                    Desde criança, meu interesse pelo design foi influenciado por meus pais, fotógrafos,
-                    e cresci explorando ferramentas como Adobe Photoshop, Corel Draw e Adobe Lightroom, alimentando minha
-                    criatividade.
-                </p>
-                <p>
-                    Em 2023, descobri o universo da Experiência do Usuário e tenho me dedicado a aprender através
-                    de cursos, leituras e prática.
-                </p>
-                <p>
-                    Adquiri <span>habilidades</span> em: Pesquisas com usuários, Criação de personas e
-                    proto-personas, Metodologia do Design Thinking, Design de Interface (UI), Criação de protótipos de
-                    baixa,
-                    média e alta fidelidade (Wireframes), Tipografia, Teoria das cores, Styleguide, Design System, Design
-                    Token,
-                    Acessibilidade, Hierarquia e Figma.
-                </p>
-                <p>
-                    Estou ansiosa para aplicar minha experiência e conhecimento em projetos
-                    desafiadores e contribuir para a criação de experiências significativas para os usuários.
-                </p>
-                <!-- <div class="area-button">
-                    <ButtonDefault text="Baixa Currículo" :function-click="downloadCV" />
-                </div> -->
-            </div>
+    <div></div>
+    <div class="content-about">
+        <TitleDefault text="Sobre mim" />
+        <div class="area-desc">
+            <p>
+                Sou <span>Product Designer</span> com uma pitada de conhecimento em desenvolvimento front-end. Graduanda
+                em
+                Ciência da
+                Computação pela Universidade do Estado do Amazonas (UEA) e com formações por meio de cursos e livros em
+                <span>Experiência do Usuário.</span>
+            </p>
+            <p>
+                Desde criança, meu interesse pelo design foi influenciado por meus pais, fotógrafos,
+                e cresci explorando ferramentas como Adobe Photoshop, Corel Draw e Adobe Lightroom, alimentando minha
+                criatividade.
+            </p>
+            <p>
+                Em 2023, descobri o universo da Experiência do Usuário e tenho me dedicado a aprender através
+                de cursos, leituras e prática.
+            </p> 
         </div>
-    </ContainerPage>
+    </div>
 </template>
 
 <script lang="ts">
@@ -71,19 +54,20 @@ export default defineComponent({
 <style scoped>
 @import '@/assets/main.css';
 
-.content-about {
-    margin-bottom: 80px;
+.content-about{
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
-.area-desc,
-.content-about {
+.area-desc {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 p {
-    margin-top: 16px;
     color: var(--color-black);
     font-size: 14px;
     font-weight: 500;
@@ -93,23 +77,11 @@ p {
 
 span {
     color: var(--color-blue);
-    font-weight: 700;
-}
-
-.area-button {
-    margin-top: 40px;
-    width: 100%;
+    font-weight: 600;
 }
 
 
 @media screen and (min-width: 796px) {
-    .content-about {
-        margin-bottom: -20px;
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 80px;
-        align-items: center;
-    }
 
     p {
         font-size: 16px;
