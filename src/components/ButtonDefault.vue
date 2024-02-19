@@ -51,4 +51,16 @@ button{
     border: 1px solid var(--color-orange);
 }
 
+@media screen and (min-width: 796px){
+    button{
+        font-size: 18px;
+    }
+
+    .outline:hover, .solid:hover{
+        background: var(--color-orange);
+    }
+
+    .solid:hover{}
+}
+
 </style>

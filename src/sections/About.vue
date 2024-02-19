@@ -18,7 +18,7 @@
             <p>
                 Em 2023, descobri o universo da Experiência do Usuário e tenho me dedicado a aprender através
                 de cursos, leituras e prática.
-            </p> 
+            </p>
         </div>
     </div>
 </template>
@@ -54,7 +54,7 @@ export default defineComponent({
 <style scoped>
 @import '@/assets/main.css';
 
-.content-about{
+.content-about {
     align-self: flex-start;
     display: flex;
     flex-direction: column;
@@ -65,6 +65,7 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 12px;
 }
 
 p {
@@ -84,8 +85,9 @@ span {
 @media screen and (min-width: 796px) {
 
     p {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 28px;
+        text-align: left;
     }
 
     .area-button {
