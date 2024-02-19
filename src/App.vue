@@ -1,17 +1,15 @@
 <template>
     <main class="general-container">
-        <div>
-            <Navbar />
-            <!-- <router-view></router-view> -->
-            <ContainerPage>
-                <Home />
-                <About />
-                <Projects />
-                <Articles />
-                <Contact />
-            </ContainerPage>
-            <FooterDefault />
-        </div>
+        <Navbar />
+        <!-- <router-view></router-view> -->
+        <ContainerPage>
+            <Home />
+            <About />
+            <Projects />
+            <Articles />
+            <Contact />
+        </ContainerPage>
+        <FooterDefault />
     </main>
 </template>
 
@@ -35,7 +33,7 @@ export default defineComponent({
 
 <style scoped>
 @import '@/assets/main.css';
-.general-container div {
+.general-container {
     padding: 32px 32px 0 32px;
 }
 
@@ -43,10 +41,6 @@ export default defineComponent({
     .general-container {
         max-width: 1128px;
         margin: 0 auto
-    }
-
-    .general-container div{
-        margin-bottom: 200px;
     }
 }
 </style>

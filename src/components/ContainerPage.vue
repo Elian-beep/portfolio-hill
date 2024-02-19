@@ -32,9 +32,8 @@ section{
 }
 
 @media screen and (min-width: 796px){
-    .styleHome{
-        flex-direction: row-reverse;
-        justify-content: space-between;
+    section{
+        gap: 80px;
     }
 }
 </style>
