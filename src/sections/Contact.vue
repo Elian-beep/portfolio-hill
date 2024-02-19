@@ -7,14 +7,18 @@
                 Você pode entrar em contato comigo através das redes sociais abaixo ou via email:
                 <span @click="redirectSocialMedia('mailto:linda.15brandao@gmail.com')">linda.15brandao@gmail.com</span>
             </p>
-            <CardContact :icon="linkedin_icon" link="https://www.linkedin.com/in/lindassouza/"
-                text="Linkedin - conheça minha trajetória profissional." />
-            <CardContact :icon="medium_icon" link="https://medium.com/@lindassouza"
-                text="Medium - conheça meus artigos e projetos publicados." />
-            <CardContact :icon="gmail_icon" link="mailto:linda.15brandao@gmail.com"
-                text="Gmail - Entre em contato comigo e vamos conversar!" />
+            <div class="area-links">
+                <CardContact :icon="linkedin_icon" link="https://www.linkedin.com/in/lindassouza/"
+                    text="Linkedin - conheça minha trajetória profissional." />
+                <CardContact :icon="medium_icon" link="https://medium.com/@lindassouza"
+                    text="Medium - conheça meus artigos e projetos publicados." />
+                <CardContact :icon="gmail_icon" link="mailto:linda.15brandao@gmail.com"
+                    text="Gmail - Entre em contato comigo e vamos conversar!" />
+            </div>
         </div>
-        <ButtonDefault text="Baixar currículo" :function-click="downloadCV" pre-style="outline" />
+        <div class="area-button">
+            <ButtonDefault text="Baixar currículo" :function-click="downloadCV" pre-style="outline" />
+        </div>
     </div>
 </template>
 
@@ -53,17 +57,18 @@ export default defineComponent({
 <style scoped>
 @import '@/assets/main.css';
 
-.contact-container{
+.contact-container {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.contact-content {
+.contact-content, .area-links {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
+
 .invite-text {
     color: var(--color-black);
     font-size: 14px;
@@ -79,6 +84,10 @@ export default defineComponent({
 
 
 @media screen and (min-width: 796px) {
+    .contact-content {
+        gap: 32px;
+    }
+
     .invite-text {
         font-size: 18px;
     }
@@ -86,6 +95,12 @@ export default defineComponent({
     .area-links {
         flex-direction: row;
         gap: 24px;
+    }
+
+    .area-button{
+        margin-top: 8px;
+        width: 360px;
+        align-self: center;
     }
 }
 </style>

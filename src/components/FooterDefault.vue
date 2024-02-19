@@ -37,7 +37,9 @@ footer span {
 
 @media screen and (min-width: 796px){
     footer span{
-        font-size: 12px;
+        padding: 40px;
+        font-size: 16px;
+        margin-top: 140px;
     }
 }
 </style>
