@@ -59,7 +59,7 @@ export default defineComponent({
     transition: all .2s ease-in;
 }
 
-.content-card:hover{
+.content-card:hover {
     border-color: var(--color-orange);
 }
 
@@ -101,12 +101,16 @@ export default defineComponent({
 }
 
 @media screen and (min-width: 796px) {
+    .content-card{
+        width: 305px;
+    }
 
-    .title{
+
+    .title {
         font-size: 16px;
     }
 
-    .description{
+    .description {
         font-size: 14px;
     }
 }

@@ -48,13 +48,14 @@ export default defineComponent({
     flex-direction: column;
     align-items: center;
     gap: 24px;
+    width: 100%;
 }
 
 @media screen and (min-width: 796px){
-    .container-articles{
+    .articles-content{
         flex-wrap: wrap;
         flex-direction: row;
-        margin-bottom: -10px;
+        gap: 65px;
     }
 }
 

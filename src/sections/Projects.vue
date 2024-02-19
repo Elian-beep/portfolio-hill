@@ -50,7 +50,7 @@ export default defineComponent({
     .container-projects {
         flex-wrap: wrap;
         flex-direction: row;
-        margin-bottom: -10px;
+        gap: 65px;
     }
 }
 </style>
