@@ -30,6 +30,7 @@ export default defineComponent({
     methods: {
         selectLink(path: string) {
             this.changeSectionName(path);
+            this.changeOnAlertSwitch();
         },
     },
     watch: {
@@ -39,9 +40,13 @@ export default defineComponent({
         const changeSectionName = (name: string) => {
             store.setSectionName(name);
         }
+        const changeOnAlertSwitch = () => {
+            store.state.onAlertSwitch ? store.setOnAlertSwitch(false) : store.setOnAlertSwitch(true);
+        }
 
         return {
             changeSectionName,
+            changeOnAlertSwitch,
             store
         }
 

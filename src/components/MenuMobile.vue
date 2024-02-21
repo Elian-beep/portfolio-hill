@@ -8,11 +8,11 @@
         </div>
         <div class="nav-list" :class="{ open: open }">
             <ul>
-                <li :class="{ 'active': store.state.sectionName == 'home' }" class="nav-item"><a @click="selectLink('home')" href="#" class="nav-link">Home</a></li>
-                <li :class="{ 'active': store.state.sectionName == 'about' }" class="nav-item"><a @click="selectLink('about')" href="#" class="nav-link">Sobre</a></li>
-                <li :class="{ 'active': store.state.sectionName == 'projects' }" class="nav-item"><a @click="selectLink('projects')" href="#" class="nav-link">Projetos</a></li>
-                <li :class="{ 'active': store.state.sectionName == 'articles' }" class="nav-item"><a @click="selectLink('articles')" href="#" class="nav-link">Artigos</a></li>
-                <li :class="{ 'active': store.state.sectionName == 'contact' }" class="nav-item"><a @click="selectLink('contact')" href="#" class="nav-link">Contato</a></li>
+                <li :class="{ 'active': store.state.sectionName == 'home' }" class="nav-item"><a @click="selectLink('home')" class="nav-link">Home</a></li>
+                <li :class="{ 'active': store.state.sectionName == 'about' }" class="nav-item"><a @click="selectLink('about')" class="nav-link">Sobre</a></li>
+                <li :class="{ 'active': store.state.sectionName == 'projects' }" class="nav-item"><a @click="selectLink('projects')" class="nav-link">Projetos</a></li>
+                <li :class="{ 'active': store.state.sectionName == 'articles' }" class="nav-item"><a @click="selectLink('articles')" class="nav-link">Artigos</a></li>
+                <li :class="{ 'active': store.state.sectionName == 'contact' }" class="nav-item"><a @click="selectLink('contact')" class="nav-link">Contato</a></li>
             </ul>
         </div>
     </div>
@@ -40,8 +40,8 @@ export default defineComponent({
             this.menuIconSwitch = this.open ? menuIconFocus : menuIcon ;
         },
         selectLink(path: string){
-            console.log("rolar tela");
             this.changeSectionName(path);
+            this.changeOnAlertSwitch();
             this.onHandleMenu();
         },
     },
@@ -52,9 +52,13 @@ export default defineComponent({
         const changeSectionName = (name: string) => {
             store.setSectionName(name);
         }
+        const changeOnAlertSwitch = () => {
+            store.state.onAlertSwitch ? store.setOnAlertSwitch(false) : store.setOnAlertSwitch(true);
+        }
 
         return {
             changeSectionName,
+            changeOnAlertSwitch,
             store
         }
         

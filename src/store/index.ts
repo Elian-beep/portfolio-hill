@@ -15,10 +15,12 @@ import { reactive, readonly } from 'vue';
 
 interface State {
     sectionName: string,
+    onAlertSwitch: boolean,
 }
 
 const state: State = reactive({
     sectionName: 'home',
+    onAlertSwitch: false
 });
 
 export const provideStore = () => {
@@ -26,6 +28,9 @@ export const provideStore = () => {
         state: readonly(state),
         setSectionName: (name: string) => {
             state.sectionName = name;
-        }
+        },
+        setOnAlertSwitch: (isSwitch: boolean) => {
+            state.onAlertSwitch = isSwitch;
+        },
     }
 }

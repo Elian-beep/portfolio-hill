@@ -1,33 +1,3 @@
-<template>
-    <div class="area-img">
-        <ResizeImg :img-mobile="profileMobile" :img-laptop="profileLaptop" text-alt="Imagem de perfil" />
-    </div>
-    <div class="area-desc">
-        <div class="area-role">
-            <span>Oioi! Eu sou a</span>
-            <h1>Linda Souza!</h1>
-            <h3>Product Designer (UX/UI)</h3>
-        </div>
-        <div class="description">
-            <p>
-                Sou apaixonada pelo universo da Experiência do Usuário, com uma pitada de conhecimento em
-                desenvolvimento
-                front-end. Foco em resolver problemas e criar produtos digitais que fazem a diferença, utilizando
-                ferramentas e processos de UX/UI centradas na experiência do usuário.
-            </p>
-        </div>
-        <div class="area-desc-footer">
-            <span>Vamos criar experiências incríveis juntos?</span>
-            <div class="area-button">
-                <ButtonDefault pre-style="solid" text="Entrar em contato" :function-click="downloadCV" />
-            </div>
-            <div class="area-button">
-                <ButtonDefault pre-style="outline" text="Baixar Currículo" :function-click="() => null" />
-            </div>
-        </div>
-    </div>
-</template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
 import ContainerPage from '@/components/ContainerPage.vue';
@@ -63,6 +33,36 @@ export default defineComponent({
 });
 </script>
 
+<template>
+    <div class="area-img">
+        <ResizeImg :img-mobile="profileMobile" :img-laptop="profileLaptop" text-alt="Imagem de perfil" />
+    </div>
+    <div class="area-desc">
+        <div class="area-role">
+            <span>Oioi! Eu sou a</span>
+            <h1>Linda Souza!</h1>
+            <h3>Product Designer (UX/UI)</h3>
+        </div>
+        <div class="description">
+            <p>
+                Sou apaixonada pelo universo da Experiência do Usuário, com uma pitada de conhecimento em
+                desenvolvimento
+                front-end. Foco em resolver problemas e criar produtos digitais que fazem a diferença, utilizando
+                ferramentas e processos de UX/UI centradas na experiência do usuário.
+            </p>
+        </div>
+        <div class="area-desc-footer">
+            <span>Vamos criar experiências incríveis juntos?</span>
+            <div class="area-button">
+                <ButtonDefault pre-style="solid" text="Entrar em contato" :function-click="downloadCV" />
+            </div>
+            <div class="area-button">
+                <ButtonDefault pre-style="outline" text="Baixar Currículo" :function-click="() => null" />
+            </div>
+        </div>
+    </div>
+</template>
+
 <style scoped>
 @import '@/assets/main.css';
 
@@ -77,7 +77,7 @@ export default defineComponent({
     gap: 16px;
 }
 
-.area-desc-footer span{
+.area-desc-footer span {
     color: var(--color-blue);
     font-size: 16px;
 }
@@ -116,9 +116,6 @@ export default defineComponent({
 }
 
 @media screen and (min-width: 796px) {
-    .area-img {
-        margin-top: 160px;
-    }
 
     .area-desc {
         gap: 24px;
