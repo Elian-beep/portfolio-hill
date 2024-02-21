@@ -1,6 +1,5 @@
 <template>
-    <div></div>
-    <div class="content-about">
+    
         <TitleDefault text="Sobre mim" />
         <div class="area-desc">
             <p>
@@ -20,7 +19,6 @@
                 de cursos, leituras e prática.
             </p>
         </div>
-    </div>
 </template>
 
 <script lang="ts">
@@ -53,13 +51,6 @@ export default defineComponent({
 
 <style scoped>
 @import '@/assets/main.css';
-
-.content-about {
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
 
 .area-desc {
     display: flex;

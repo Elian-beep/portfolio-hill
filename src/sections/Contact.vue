@@ -1,24 +1,21 @@
 <template>
-    <div></div>
-    <div class="contact-container">
-        <div class="contact-content">
-            <TitleDefault text="Contato" />
-            <p class="invite-text">
-                Você pode entrar em contato comigo através das redes sociais abaixo ou via email:
-                <span @click="redirectSocialMedia('mailto:linda.15brandao@gmail.com')">linda.15brandao@gmail.com</span>
-            </p>
-            <div class="area-links">
-                <CardContact :icon="linkedin_icon" link="https://www.linkedin.com/in/lindassouza/"
-                    text="Linkedin - conheça minha trajetória profissional." />
-                <CardContact :icon="medium_icon" link="https://medium.com/@lindassouza"
-                    text="Medium - conheça meus artigos e projetos publicados." />
-                <CardContact :icon="gmail_icon" link="mailto:linda.15brandao@gmail.com"
-                    text="Gmail - Entre em contato comigo e vamos conversar!" />
-            </div>
+    <div class="contact-content">
+        <TitleDefault text="Contato" />
+        <p class="invite-text">
+            Você pode entrar em contato comigo através das redes sociais abaixo ou via email:
+            <span @click="redirectSocialMedia('mailto:linda.15brandao@gmail.com')">linda.15brandao@gmail.com</span>
+        </p>
+        <div class="area-links">
+            <CardContact :icon="linkedin_icon" link="https://www.linkedin.com/in/lindassouza/"
+                text="Linkedin - conheça minha trajetória profissional." />
+            <CardContact :icon="medium_icon" link="https://medium.com/@lindassouza"
+                text="Medium - conheça meus artigos e projetos publicados." />
+            <CardContact :icon="gmail_icon" link="mailto:linda.15brandao@gmail.com"
+                text="Gmail - Entre em contato comigo e vamos conversar!" />
         </div>
-        <div class="area-button">
-            <ButtonDefault text="Baixar currículo" :function-click="downloadCV" pre-style="outline" />
-        </div>
+    </div>
+    <div class="area-button">
+        <ButtonDefault text="Baixar currículo" :function-click="downloadCV" pre-style="outline" />
     </div>
 </template>
 
@@ -57,13 +54,8 @@ export default defineComponent({
 <style scoped>
 @import '@/assets/main.css';
 
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.contact-content, .area-links {
+.contact-content,
+.area-links {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -97,7 +89,7 @@ export default defineComponent({
         gap: 24px;
     }
 
-    .area-button{
+    .area-button {
         margin-top: 8px;
         width: 360px;
         align-self: center;

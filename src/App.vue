@@ -1,20 +1,30 @@
 <template>
     <main class="general-container">
         <Navbar />
-        <!-- <router-view></router-view> -->
         <ContainerPage>
-            <Home />
-            <About />
-            <Projects />
-            <Articles />
-            <Contact />
+            <section ref="home" class="home-container">
+                <Home />
+            </section>
+            <section ref="about" class="content-about">
+                <About />
+            </section>
+            <section ref="projects" class="projects-content">
+                <Projects />
+            </section>
+            <section ref="articles" class="articles-container">
+                <Articles />
+            </section>
+            <section ref="contact" class="contact-container">
+                <Contact />
+            </section>
         </ContainerPage>
         <FooterDefault />
     </main>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, inject } from 'vue';
+
 import Navbar from './components/Navbar.vue';
 import FooterDefault from './components/FooterDefault.vue';
 
@@ -28,19 +38,81 @@ import Contact from './sections/Contact.vue';
 export default defineComponent({
     name: '',
     components: { Navbar, FooterDefault, ContainerPage, Home, About, Projects, Articles, Contact },
+    mounted() {
+    },
+    data() {
+        return {
+            store: inject<any>('store'),
+        }
+    },
+    methods: {
+        scrollToSection(){
+            const section = this.$refs[this.store.state.sectionName] as HTMLElement;
+            console.log(section);
+            section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    },
+    watch: {
+        'store.state.sectionName'(){
+            this.scrollToSection();
+            console.log('nome da seção mudou');
+        }
+    }
 });
 </script>
 
-<style scoped>
+<style>
 @import '@/assets/main.css';
+
 .general-container {
     padding: 32px 32px 0 32px;
 }
 
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.content-about {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.projects-content {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.articles-container {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 @media screen and (min-width: 796px) {
     .general-container {
+        padding: 0;
         max-width: 1128px;
         margin: 0 auto
+    }
+
+    .home-container {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
     }
 }
 </style>

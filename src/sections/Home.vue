@@ -1,5 +1,4 @@
 <template>
-    <div class="home-container">
         <div>
             <ResizeImg :img-mobile="profileMobile" :img-laptop="profileLaptop" text-alt="Imagem de perfil" />
         </div>
@@ -27,7 +26,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </template>
 
 <script lang="ts">
@@ -67,13 +65,6 @@ export default defineComponent({
 
 <style scoped>
 @import '@/assets/main.css';
-
-.home-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-}
 
 .area-desc, .area-desc-footer {
     display: flex;
@@ -115,11 +106,6 @@ export default defineComponent({
 }
 
 @media screen and (min-width: 796px) {
-    .home-container{
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        width: 100%;
-    }
     .area-desc {
         gap: 24px;
     }

@@ -1,8 +1,6 @@
 <template>
     <main>
-        <section>
-            <slot></slot>
-        </section>
+        <slot></slot>
     </main>
 </template>
 
@@ -22,9 +20,6 @@ export default defineComponent({
 main {
     padding-top: 24px;
     max-width: 1128px;
-}
-
-section{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +27,7 @@ section{
 }
 
 @media screen and (min-width: 796px){
-    section{
+    main{
         gap: 80px;
     }
 }

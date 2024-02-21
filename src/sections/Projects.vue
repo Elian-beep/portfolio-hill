@@ -1,11 +1,8 @@
 <template>
-    <div></div>
-    <div class="projects-content">
-        <TitleDefault text="Meus projetos" />
-        <div class="container-projects">
-            <div v-for="project of projects" :key="project.id">
-                <Card :description="project.description" :img-card="project.img" :link="project.link" :title="project.title" />
-            </div>
+    <TitleDefault text="Meus projetos" />
+    <div class="container-projects">
+        <div v-for="project of projects" :key="project.id">
+            <Card :description="project.description" :img-card="project.img" :link="project.link" :title="project.title" />
         </div>
     </div>
 </template>
@@ -31,12 +28,6 @@ export default defineComponent({
 <style scoped>
 @import '@/assets/main.css';
 
-.projects-content {
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
 
 .container-projects {
     display: flex;
