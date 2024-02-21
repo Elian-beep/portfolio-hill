@@ -23,12 +23,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 80px;
 }
 
 @media screen and (min-width: 796px){
     main{
-        gap: 80px;
+        gap: 160px;
     }
 }
 </style>

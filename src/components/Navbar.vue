@@ -1,5 +1,5 @@
 <template>
-    <hedaer>
+    <header >
         <nav class="navbar">
             <div class="logo-title">
                 <h1>Linda Souza</h1>
@@ -7,7 +7,7 @@
             <MenuMobile v-if="!isWideScreen" />
             <MenuLaptop v-if="isWideScreen" />
         </nav>
-    </hedaer>
+    </header>
 </template>
 
 <script lang="ts">
@@ -29,6 +29,13 @@ export default defineComponent({
 <style scoped>
 @import '@/assets/main.css';
 
+header {
+    background: var(--color-white);
+    padding: 16px 32px;
+    position: fixed;
+    width: 85%;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -41,8 +48,19 @@ export default defineComponent({
     font-weight: 600;
 }
 
-@media screen and (min-width: 796px){
-    .logo-title{
+@media screen and (min-width: 796px) {
+    header{
+        -webkit-box-shadow: 0px 4px 7px -1px rgba(0, 0, 0, 0.42);
+        -moz-box-shadow: 0px 4px 7px -1px rgba(0, 0, 0, 0.42);
+        box-shadow: 0px 4px 7px -1px rgba(0, 0, 0, 0.42);
+        width: 100%;
+    }
+    
+    .navbar{
+        margin: 0 auto;
+        max-width: 1128px;
+    }
+    .logo-title {
         font-size: 16px;
         padding: 16px 0;
     }

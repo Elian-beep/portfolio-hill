@@ -1,31 +1,31 @@
 <template>
-        <div>
-            <ResizeImg :img-mobile="profileMobile" :img-laptop="profileLaptop" text-alt="Imagem de perfil" />
+    <div class="area-img">
+        <ResizeImg :img-mobile="profileMobile" :img-laptop="profileLaptop" text-alt="Imagem de perfil" />
+    </div>
+    <div class="area-desc">
+        <div class="area-role">
+            <span>Oioi! Eu sou a</span>
+            <h1>Linda Souza!</h1>
+            <h3>Product Designer (UX/UI)</h3>
         </div>
-        <div class="area-desc">
-            <div class="area-role">
-                <span>Oioi! Eu sou a</span>
-                <h1>Linda Souza!</h1>
-                <h3>Product Designer (UX/UI)</h3>
+        <div class="description">
+            <p>
+                Sou apaixonada pelo universo da Experiência do Usuário, com uma pitada de conhecimento em
+                desenvolvimento
+                front-end. Foco em resolver problemas e criar produtos digitais que fazem a diferença, utilizando
+                ferramentas e processos de UX/UI centradas na experiência do usuário.
+            </p>
+        </div>
+        <div class="area-desc-footer">
+            <span>Vamos criar experiências incríveis juntos?</span>
+            <div class="area-button">
+                <ButtonDefault pre-style="solid" text="Entrar em contato" :function-click="downloadCV" />
             </div>
-            <div class="description">
-                <p>
-                    Sou apaixonada pelo universo da Experiência do Usuário, com uma pitada de conhecimento em
-                    desenvolvimento
-                    front-end. Foco em resolver problemas e criar produtos digitais que fazem a diferença, utilizando
-                    ferramentas e processos de UX/UI centradas na experiência do usuário.
-                </p>
-            </div>
-            <div class="area-desc-footer">
-                <span>Vamos criar experiências incríveis juntos?</span>
-                <div class="area-button">
-                    <ButtonDefault pre-style="solid" text="Entrar em contato" :function-click="downloadCV" />
-                </div>
-                <div class="area-button">
-                    <ButtonDefault pre-style="outline" text="Baixar Currículo" :function-click="() => null" />
-                </div>
+            <div class="area-button">
+                <ButtonDefault pre-style="outline" text="Baixar Currículo" :function-click="() => null" />
             </div>
         </div>
+    </div>
 </template>
 
 <script lang="ts">
@@ -66,10 +66,20 @@ export default defineComponent({
 <style scoped>
 @import '@/assets/main.css';
 
-.area-desc, .area-desc-footer {
+.area-img {
+    margin-top: 16px;
+}
+
+.area-desc,
+.area-desc-footer {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+.area-desc-footer span{
+    color: var(--color-blue);
+    font-size: 16px;
 }
 
 .area-role {
@@ -106,11 +116,15 @@ export default defineComponent({
 }
 
 @media screen and (min-width: 796px) {
+    .area-img {
+        margin-top: 160px;
+    }
+
     .area-desc {
         gap: 24px;
     }
-    
-    .area-role{
+
+    .area-role {
         gap: 8px;
     }
 
@@ -126,7 +140,7 @@ export default defineComponent({
         font-size: 20px;
     }
 
-    .description{
+    .description {
         max-width: 648px;
     }
 

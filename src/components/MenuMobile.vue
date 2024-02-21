@@ -29,7 +29,6 @@ export default defineComponent({
     data() {
         return {
             open: false,
-            currentPath: inject<any>('store').state.sectionName,
             menuIcon,
             menuIconFocus,
             menuIconSwitch: menuIcon

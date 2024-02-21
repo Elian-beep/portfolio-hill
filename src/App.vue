@@ -1,7 +1,7 @@
 <template>
+    <Navbar />
     <main class="general-container">
-        <Navbar />
-        <ContainerPage>
+        <ContainerPage ref="sections">
             <section ref="home" class="home-container">
                 <Home />
             </section>
@@ -38,26 +38,34 @@ import Contact from './sections/Contact.vue';
 export default defineComponent({
     name: '',
     components: { Navbar, FooterDefault, ContainerPage, Home, About, Projects, Articles, Contact },
-    mounted() {
-    },
     data() {
         return {
-            store: inject<any>('store'),
         }
     },
     methods: {
         scrollToSection(){
             const section = this.$refs[this.store.state.sectionName] as HTMLElement;
-            console.log(section);
             section.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
+        },
     },
     watch: {
         'store.state.sectionName'(){
             this.scrollToSection();
             console.log('nome da seção mudou');
         }
-    }
+    },
+    setup() {
+        const store = inject<any>('store');
+        const changeSectionName = (name: string) => {
+            store.setSectionName(name);
+        }
+
+        return {
+            changeSectionName,
+            store
+        }
+
+    },
 });
 </script>
 

@@ -102,7 +102,7 @@ export default defineComponent({
 
 @media screen and (min-width: 796px) {
     .content-card{
-        width: 305px;
+        width: 304px;
     }
 
 
