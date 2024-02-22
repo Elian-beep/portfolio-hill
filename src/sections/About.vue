@@ -1,5 +1,4 @@
 <template>
-    
         <TitleDefault text="Sobre mim" />
         <div class="area-desc">
             <p>

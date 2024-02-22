@@ -10,10 +10,11 @@ import About from './sections/About.vue';
 import Projects from './sections/Projects.vue';
 import Articles from './sections/Articles.vue';
 import Contact from './sections/Contact.vue';
+import Skills from './sections/Skills.vue';
 
 export default defineComponent({
     name: '',
-    components: { Navbar, FooterDefault, ContainerPage, Home, About, Projects, Articles, Contact },
+    components: { Navbar, FooterDefault, ContainerPage, Home, About, Projects, Articles, Contact, Skills },
     data() {
         return {
         }
@@ -29,6 +30,7 @@ export default defineComponent({
 
             const refHome = this.$refs.home as HTMLElement;
             const refAbout = this.$refs.about as HTMLElement;
+            const refSkills = this.$refs.skills as HTMLElement;
             const refProjects = this.$refs.projects as HTMLElement;
             const refArticles = this.$refs.articles as HTMLElement;
             const refContact = this.$refs.contact as HTMLElement;
@@ -37,6 +39,8 @@ export default defineComponent({
                 this.changeSectionName('home');
             } else if (scrollPosition < refAbout.offsetTop + windowHeight / 3.5) {
                 this.changeSectionName('about');
+            } else if (scrollPosition < refSkills.offsetTop + windowHeight / 3.5) {
+                this.changeSectionName('skills');
             } else if (scrollPosition < refProjects.offsetTop + windowHeight / 2.5) {
                 this.changeSectionName('projects');
             } else if (scrollPosition < refArticles.offsetTop + windowHeight / 3) {
@@ -84,6 +88,9 @@ export default defineComponent({
             <section ref="about" class="content-about">
                 <About />
             </section>
+            <section ref="skills" class="content-skills">
+                <Skills />
+            </section>
             <section ref="projects" class="projects-content">
                 <Projects />
             </section>
@@ -119,6 +126,17 @@ export default defineComponent({
     gap: 32px;
 }
 
+.content-skills{
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: var(--color-gray-min);
+    width: 100%;
+    padding: 32px 8px;
+    border-radius: 5px;
+}
+
 .projects-content {
     align-self: flex-start;
     display: flex;
@@ -151,6 +169,10 @@ export default defineComponent({
         justify-content: space-between;
         width: 100%;
         margin-top: 160px;
+    }
+
+    .content-skills{
+        padding: 32px;
     }
 }
 </style>

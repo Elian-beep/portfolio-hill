@@ -6,6 +6,9 @@
         <li :class="{ 'active': store.state.sectionName == 'about' }" class="nav-item">
             <a @click="selectLink('about')" class="nav-link">Sobre</a>
         </li>
+        <li :class="{ 'active': store.state.sectionName == 'skills' }" class="nav-item">
+            <a @click="selectLink('skills')" class="nav-link">Habilidades</a>
+        </li>
         <li :class="{ 'active': store.state.sectionName == 'projects' }" class="nav-item">
             <a @click="selectLink('projects')" class="nav-link">Projetos</a>
         </li>

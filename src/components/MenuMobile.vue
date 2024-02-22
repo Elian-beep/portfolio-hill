@@ -10,6 +10,7 @@
             <ul>
                 <li :class="{ 'active': store.state.sectionName == 'home' }" class="nav-item"><a @click="selectLink('home')" class="nav-link">Home</a></li>
                 <li :class="{ 'active': store.state.sectionName == 'about' }" class="nav-item"><a @click="selectLink('about')" class="nav-link">Sobre</a></li>
+                <li :class="{ 'active': store.state.sectionName == 'skills' }" class="nav-item"><a @click="selectLink('skills')" class="nav-link">Habilidades</a></li>
                 <li :class="{ 'active': store.state.sectionName == 'projects' }" class="nav-item"><a @click="selectLink('projects')" class="nav-link">Projetos</a></li>
                 <li :class="{ 'active': store.state.sectionName == 'articles' }" class="nav-item"><a @click="selectLink('articles')" class="nav-link">Artigos</a></li>
                 <li :class="{ 'active': store.state.sectionName == 'contact' }" class="nav-item"><a @click="selectLink('contact')" class="nav-link">Contato</a></li>
