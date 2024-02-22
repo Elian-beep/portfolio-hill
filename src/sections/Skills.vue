@@ -25,7 +25,7 @@ export default defineComponent({
             <SkillItem text="Hierarquia tipográfica" />
             <SkillItem text="Teoria das cores" />
             <SkillItem text="Style Guide" />
-            <SkillItem text="Desgin System" />
+            <SkillItem text="Design System" />
             <SkillItem text="Acessibilidade" />
             <SkillItem text="Discovery" />
             <SkillItem text="Criação de protótipos de baixa, média e alta fidelidade" />
