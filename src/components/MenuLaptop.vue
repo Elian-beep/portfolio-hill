@@ -1,49 +1,56 @@
 <template>
     <ul class="nav-list">
-        <li :class="{ 'active': currentPath == '/' }" class="nav-item">
-            <a @click="selectLink('/')" href="#" class="nav-link">Home</a>
+        <li :class="{ 'active': store.state.sectionName == 'home' }" class="nav-item">
+            <a @click="selectLink('home')" class="nav-link">Home</a>
         </li>
-        <li :class="{ 'active': currentPath == '/about' }" class="nav-item">
-            <a @click="selectLink('/about')" href="#" class="nav-link">Sobre</a>
+        <li :class="{ 'active': store.state.sectionName == 'about' }" class="nav-item">
+            <a @click="selectLink('about')" class="nav-link">Sobre</a>
         </li>
-        <li :class="{ 'active': currentPath == '/projects' }" class="nav-item">
-            <a @click="selectLink('/projects')" href="#" class="nav-link">Projetos</a>
+        <li :class="{ 'active': store.state.sectionName == 'projects' }" class="nav-item">
+            <a @click="selectLink('projects')" class="nav-link">Projetos</a>
         </li>
-        <li :class="{ active: currentPath == '/articles' }" class="nav-item">
-            <a @click="selectLink('/articles')" href="#" class="nav-link">Artigos</a>
+        <li :class="{ active: store.state.sectionName == 'articles' }" class="nav-item">
+            <a @click="selectLink('articles')" class="nav-link">Artigos</a>
         </li>
-        <li :class="{ active: currentPath == '/curriculum' }" class="nav-item">
-            <a @click="downloadCV" href="#" class="nav-link">Currículo</a>
-        </li>
-        <li :class="{ active: currentPath == '/contact' }" class="nav-item">
-            <a @click="selectLink('/contact')" href="#" class="nav-link">Contato</a>
+        <li :class="{ active: store.state.sectionName == 'contact' }" class="nav-item">
+            <a @click="selectLink('contact')" class="nav-link">Contato</a>
         </li>
     </ul>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, inject, ref } from 'vue';
 
 export default defineComponent({
     name: 'MenuLaptop',
     data() {
         return {
-            currentPath: this.$route.path,
         }
     },
     methods: {
         selectLink(path: string) {
-            this.$router.push({ path: path });
-        },
-        downloadCV() {
-            window.open("https://docs.google.com/document/d/11Mhqm_i8II19DEpWXh8NlO5_zFM76yC4vPGHVVxFHnE/edit?usp=sharing", '_blank');
+            this.changeSectionName(path);
+            this.changeOnAlertSwitch();
         },
     },
     watch: {
-        '$route.path'(newPath) {
-            this.currentPath = newPath;
+    },
+    setup() {
+        const store = inject<any>('store');
+        const changeSectionName = (name: string) => {
+            store.setSectionName(name);
         }
-    }
+        const changeOnAlertSwitch = () => {
+            store.state.onAlertSwitch ? store.setOnAlertSwitch(false) : store.setOnAlertSwitch(true);
+        }
+
+        return {
+            changeSectionName,
+            changeOnAlertSwitch,
+            store
+        }
+
+    },
 });
 </script>
 
@@ -59,6 +66,7 @@ export default defineComponent({
 
 .nav-item:hover {
     border-bottom: 1px solid var(--color-blue);
+    cursor: pointer;
 }
 
 .nav-link {
@@ -77,5 +85,6 @@ export default defineComponent({
 .active a {
     color: var(--color-blue);
     font-weight: 700;
+    font-size: 16px;
 }
 </style>

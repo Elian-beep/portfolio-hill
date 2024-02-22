@@ -1,8 +1,6 @@
 <template>
     <main>
-        <section :class="{ styleHome : styleHome }">
-            <slot></slot>
-        </section>
+        <slot></slot>
     </main>
 </template>
 
@@ -13,12 +11,6 @@ import Navbar from '@/components/Navbar.vue';
 export default defineComponent({
     name: 'ContainerPage',
     components: { Navbar },
-    props: {
-        styleHome: {
-            type: Boolean,
-            required: false,
-        }
-    }
 });
 </script>
 
@@ -28,20 +20,15 @@ export default defineComponent({
 main {
     padding-top: 24px;
     max-width: 1128px;
-    margin-bottom: 20px;
-}
-
-section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 80px;
 }
 
 @media screen and (min-width: 796px){
-    .styleHome{
-        flex-direction: row-reverse;
-        justify-content: space-between;
+    main{
+        gap: 160px;
     }
 }
 </style>

@@ -2,7 +2,9 @@
   --color-black: #0A0A0A;
   --color-blue: #14213D;
   --color-orange: #FCA311;
+  --color-orange-min: #FFC86C;
   --color-gray: #484848;
+  --color-gray-mid: #DEDEDE;
   --color-gray-min: #EFEFEF;
   --color-gray-light: #CECECE;
   --color-white: #FEFEFE;
@@ -15,12 +17,21 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-orange);
+    border-radius: 2px;
+  }
 }
 
 #app {
   /* padding: 16px 32px; */
-  position: relative;
-  min-height: 100vh;
+  /* position: relative;
+  min-height: 100vh; */
 }
 
 /* STYLES IMGS */

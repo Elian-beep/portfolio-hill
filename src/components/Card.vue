@@ -48,7 +48,6 @@ export default defineComponent({
 @import '@/assets/main.css';
 
 .content-card {
-    width: 220px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -60,7 +59,7 @@ export default defineComponent({
     transition: all .2s ease-in;
 }
 
-.content-card:hover{
+.content-card:hover {
     border-color: var(--color-orange);
 }
 
@@ -79,7 +78,7 @@ export default defineComponent({
 
 .title {
     color: var(--color-blue);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
 
     display: -webkit-box;
@@ -91,8 +90,8 @@ export default defineComponent({
 
 .description {
     color: var(--color-gray);
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 500;
 
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -102,12 +101,16 @@ export default defineComponent({
 }
 
 @media screen and (min-width: 796px) {
+    .content-card{
+        width: 304px;
+    }
 
-    .title{
+
+    .title {
         font-size: 16px;
     }
 
-    .description{
+    .description {
         font-size: 14px;
     }
 }

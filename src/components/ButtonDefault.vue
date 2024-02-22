@@ -1,5 +1,5 @@
 <template>
-    <button :class="model" @click="functionClick()">
+    <button :class="preStyle" @click="functionClick()">
         {{ text }}
     </button>
 </template>
@@ -18,7 +18,7 @@ export default defineComponent({
             type: Function,
             required: true
         },
-        model: {
+        preStyle: {
             type: String,
             required: true,
         }
@@ -34,25 +34,33 @@ button{
     padding: 16px;
     border-radius: 10px;
     cursor: pointer;
+    
     font-size: 14px;
     font-weight: 600;
-    color: var(--color-blue);
-    /* z-index: 99;    */
     transition: all .2s ease-in;
+    color: var(--color-blue);
 }
 
 .outline{
-    border: 1px solid var(--color-orange);
     background: var(--color-white);
+    border: 1px solid var(--color-orange);
 }
 
 .solid{
     background: var(--color-orange-min);
-    border: 1px solid var(--color-orange-min);
+    border: 1px solid var(--color-orange);
 }
 
-button:hover{
-    background: var(--color-orange);
+@media screen and (min-width: 796px){
+    button{
+        font-size: 18px;
+    }
+
+    .outline:hover, .solid:hover{
+        background: var(--color-orange);
+    }
+
+    .solid:hover{}
 }
 
 </style>

@@ -20,7 +20,7 @@ export default defineComponent({
 @import '@/assets/main.css';
 .title{
     color: var(--color-orange);
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 600;
 }
 

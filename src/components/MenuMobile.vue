@@ -8,19 +8,18 @@
         </div>
         <div class="nav-list" :class="{ open: open }">
             <ul>
-                <li :class="{ 'active': currentPath == '/' }" class="nav-item"><a @click="selectLink('/')" href="#" class="nav-link">Home</a></li>
-                <li :class="{ 'active': currentPath == '/about' }" class="nav-item"><a @click="selectLink('/about')" href="#" class="nav-link">Sobre</a></li>
-                <li :class="{ 'active': currentPath == '/projects' }" class="nav-item"><a @click="selectLink('/projects')" href="#" class="nav-link">Projetos</a></li>
-                <li :class="{ 'active': currentPath == '/articles' }" class="nav-item"><a @click="selectLink('/articles')" href="#" class="nav-link">Artigos</a></li>
-                <li class="nav-item"><a @click="downloadCV" href="#" class="nav-link">Currículo</a></li>
-                <li :class="{ 'active': currentPath == '/contact' }" class="nav-item"><a @click="selectLink('/contact')" href="#" class="nav-link">Contato</a></li>
+                <li :class="{ 'active': store.state.sectionName == 'home' }" class="nav-item"><a @click="selectLink('home')" class="nav-link">Home</a></li>
+                <li :class="{ 'active': store.state.sectionName == 'about' }" class="nav-item"><a @click="selectLink('about')" class="nav-link">Sobre</a></li>
+                <li :class="{ 'active': store.state.sectionName == 'projects' }" class="nav-item"><a @click="selectLink('projects')" class="nav-link">Projetos</a></li>
+                <li :class="{ 'active': store.state.sectionName == 'articles' }" class="nav-item"><a @click="selectLink('articles')" class="nav-link">Artigos</a></li>
+                <li :class="{ 'active': store.state.sectionName == 'contact' }" class="nav-item"><a @click="selectLink('contact')" class="nav-link">Contato</a></li>
             </ul>
         </div>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, inject } from 'vue';
 
 import menuIcon from "@/assets/icons/icon-button-menu.svg";
 import menuIconFocus from "@/assets/icons/icon-button-menu-focus.svg";
@@ -30,7 +29,6 @@ export default defineComponent({
     data() {
         return {
             open: false,
-            currentPath: this.$route.path,
             menuIcon,
             menuIconFocus,
             menuIconSwitch: menuIcon
@@ -42,18 +40,29 @@ export default defineComponent({
             this.menuIconSwitch = this.open ? menuIconFocus : menuIcon ;
         },
         selectLink(path: string){
+            this.changeSectionName(path);
+            this.changeOnAlertSwitch();
             this.onHandleMenu();
-            this.$router.push({path: path});
-        },
-        downloadCV() {
-            window.open("https://docs.google.com/document/d/11Mhqm_i8II19DEpWXh8NlO5_zFM76yC4vPGHVVxFHnE/edit?usp=sharing", '_blank');
         },
     },
     watch: {
-        '$route.path'(newPath) {
-            this.currentPath = newPath;
+    },
+    setup() {
+        const store = inject<any>('store');
+        const changeSectionName = (name: string) => {
+            store.setSectionName(name);
         }
-    }
+        const changeOnAlertSwitch = () => {
+            store.state.onAlertSwitch ? store.setOnAlertSwitch(false) : store.setOnAlertSwitch(true);
+        }
+
+        return {
+            changeSectionName,
+            changeOnAlertSwitch,
+            store
+        }
+        
+    },
 });
 </script>
 
