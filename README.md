@@ -1,40 +1,63 @@
-# hport
 
-This template should help get you started developing with Vue 3 in Vite.
+# Portfólio PD
 
-## Recommended IDE Setup
+Portfólio em formato landing page desenvolvida para a demonstração de projetos e artigos da Product Designer [Linda Souza](https://www.linkedin.com/in/lindassouza/)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Type Support for `.vue` Imports in TS
+## Contribuidores
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- [@ElianBatista](https://www.linkedin.com/in/elian-batista/)
+- [@LindaSouza](https://www.linkedin.com/in/lindassouza/)
+## Funcionalidades
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+- Armazenamento e visualização de artigos e projetos
+- Exibição de dados para contato da profissional## Documentação de cores
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+| Cor               | Hexadecimal                                                 |
+| ----------------- | ---------------------------------------------------------------- |
+| Cor Preto       | ![#0A0A0A](https://via.placeholder.com/10/0A0A0A?text=+) #0A0A0A |
+| Cor Azul       | ![#14213D](https://via.placeholder.com/10/14213D?text=+) #14213D |
+| Cor Branco Laranja       | ![#FCA311](https://via.placeholder.com/10/FCA311?text=+) #FCA311 |
+| Cor Cinza       | ![#484848](https://via.placeholder.com/10/484848?text=+) #484848 |
+| Cor Branco       | ![#FEFEFE](https://via.placeholder.com/10/FEFEFE?text=+) #FEFEFE |
 
-## Customize configuration
+## Stack utilizada
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+| **Front-end** |   |
+|--------------|---|
+| ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) | ![Vue](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) |
+| ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) | ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) |
 
-## Project Setup
+## Rodando localmente
 
-```sh
-npm install
+Clone o projeto
+
+```bash
+  git clone [link_do_clone_portfolio-hill]
 ```
 
-### Compile and Hot-Reload for Development
+Entre no diretório do projeto
 
-```sh
-npm run dev
+```bash
+  cd portfolio-hill
 ```
 
-### Type-Check, Compile and Minify for Production
+Instale as dependências
 
-```sh
-npm run build
+```bash
+  npm install
 ```
+
+Inicie o servidor
+
+```bash
+  npm run dev
+```
+## Público alvo
+
+Esse projeto possui intuito em ser usado pelas seguintes entidades:
+
+- Linda Hillary (Autora do portfólio)
+- Recrutadores UX/UI & Product Designer
+- Público diverso
+
