@@ -61,3 +61,6 @@ Esse projeto possui intuito em ser usado pelas seguintes entidades:
 - Recrutadores UX/UI & Product Designer
 - Público diverso
 
+## Visualização
+
+[Portfólio Linda Souza](https://lindasouza.vercel.app)
