@@ -57,7 +57,7 @@ Inicie o servidor
 
 Esse projeto possui intuito em ser usado pelas seguintes entidades:
 
-- Linda Hillary (Autora do portfólio)
+- Linda Souza (Autora do portfólio)
 - Recrutadores UX/UI & Product Designer
 - Público diverso
 
